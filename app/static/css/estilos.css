@@ -1,0 +1,159 @@
+.content {
+    margin-top: auto;
+    width: 100%;
+}
+
+body {
+    background-color: bisque;
+}
+
+.right {
+    /*
+    top: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    width: 30%;
+    border: steelblue solid 2px;
+    height: auto;
+    
+    */
+    top: 20px;
+    width: 100%;
+    border: steelblue solid 2px;
+    height: auto;
+}
+
+.right2 {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    border: steelblue solid 2px;
+    height: auto;
+}
+
+.final {
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 20%;
+    border: steelblue solid 2px;
+    height: auto;
+}
+
+.imagenes {
+    position: relative;
+    top: 30px;
+    margin-top: 20px;
+}
+
+section {
+    position: relative;
+    top: 30px;
+    width: 70%;
+    background: white;
+    float: left;
+    overflow: auto;
+    /*padding-bottom: 60px;*/
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+}
+
+.imagen {
+    width: 100%;
+    height: calc(100% - 60px);
+    object-fit: cover;
+}
+
+.mapa {
+    /*padding-top: 50px;*/
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+aside {
+    position: relative;
+    margin-top: 20;
+    top: 30px;
+    float: right;
+    border: 1px solid red;
+    width: 29%;
+    border: 1px solid red;
+}
+
+
+/*FOOTER*/
+
+
+/*
+footer {
+    background-color: black;
+    position: fixed;
+    margin-inline: 20;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+*/
+
+.social a {
+    padding: 0 .5em;
+}
+
+.pos_footer {
+    position: relative;
+    top: 50px;
+    width: 100%;
+}
+
+
+/* FORMULARIO DE INICIO DE SESION*/
+
+
+/* FORMULARIO DE REGISTRO DE USUARIOS*/
+
+
+/*--register--*/
+
+.register-top-grid h3,
+.register-bottom-grid h3 {
+    color: #000;
+    font-size: 1em;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.register-top-grid div,
+.register-bottom-grid div {
+    width: 48%;
+    float: left;
+    margin: 10px 0;
+}
+
+.register-top-grid span,
+.register-bottom-grid span {
+    color: #555;
+    font-size: 0.8125em;
+    padding-bottom: 0.2em;
+    display: block;
+    text-transform: uppercase;
+}
+
+.register-top-grid input[type="text"],
+.register-bottom-grid input[type="text"] {
+    border: 1px solid #EEE;
+    outline-color: #00BFF0;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: 'Open Sans', sans-serif;
+}

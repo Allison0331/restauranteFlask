@@ -1,5 +1,5 @@
 from flask import Flask , render_template , redirect , request , url_for , before_render_template, after_this_request
-import easygui as eg
+#import easygui as eg
 
 
 app = Flask(__name__)

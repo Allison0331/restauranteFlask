@@ -1,0 +1,4 @@
+app/Lib/*
+app/Scripts/*
+app/__pycache__/*
+app/pyvenv.cfg

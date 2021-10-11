@@ -13,6 +13,10 @@ def index():
 def ingresar():
     return render_template('ingresar.html')
 
+@app.route('/editar_perfil')
+def editar_perfil():
+    return render_template('editar_perfil.html')
+
 @app.route('/registro_usuario')
 def registro_usuario():
     return render_template('registro.html')

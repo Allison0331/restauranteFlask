@@ -50,7 +50,7 @@ body {
     margin-top: 20px;
 }
 
-section {
+.section {
     position: relative;
     top: 30px;
     width: 70%;
@@ -62,6 +62,16 @@ section {
     padding-left: 20px;
     padding-right: 20px;
     height: auto;
+}
+
+.aside {
+    position: relative;
+    margin-top: 20;
+    top: 30px;
+    float: right;
+    border: 1px solid red;
+    width: 29%;
+    border: 1px solid red;
 }
 
 .imagen {
@@ -77,15 +87,7 @@ section {
     height: auto;
 }
 
-aside {
-    position: relative;
-    margin-top: 20;
-    top: 30px;
-    float: right;
-    border: 1px solid red;
-    width: 29%;
-    border: 1px solid red;
-}
+
 
 
 /*FOOTER*/
@@ -175,3 +177,160 @@ footer {
     margin: 0 auto;
     background-color: white;
 }
+
+
+/*   estilos Alliz   */
+
+.foto_perfil
+{
+    border-radius: 100%;
+    display:block;
+    height: 190px;
+    margin: 0;
+    max-width:190px;
+    object-fit: cover;
+}
+
+.usuario_info
+{
+    font-size:18px;
+}
+
+.usuario_info a
+{
+    color:#151515;
+}
+
+.usuario_info ul,
+.usuario_info ul li
+{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.usuario_info ul li.principal
+{
+    font-size:24px;
+}
+
+.usuario_info ul li i
+{
+    min-width:26px;
+}
+
+.usuario_enlaces
+{
+    font-size:14px;
+}
+
+.usuario_enlaces h3
+{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.usuario_enlaces ul,
+.usuario_enlaces ul li
+{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.usuario_enlaces ul li a
+{
+    color:#333;
+}
+
+.perfil_menu
+{
+    background:#fff;
+}
+
+.perfil_menu
+{
+    
+}
+
+.perfil_menu .pmenu_indv
+{
+    
+}
+
+.perfil_menu .pmenu_indv .pmenu_foto
+{
+    
+}
+
+.perfil_menu .pmenu_indv .pmenu_foto img
+{
+    height: 180px;
+    object-fit: cover;
+    transition:0.3s all;
+    width: 100%;
+}
+
+.perfil_menu .pmenu_indv .pmenu_foto img:hover
+{  
+    transform: scale(1.05);
+}
+
+.perfil_menu .pmenu_indv .pmenu_nombre
+{
+    
+}
+
+.perfil_menu .pmenu_indv .pmenu_nombre h4
+{
+    color: #fba919;
+    font-size: 20px;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 3px 0 0;
+}
+
+.perfil_menu .pmenu_indv .pmenu_precio
+{
+    margin-bottom:14px;
+}
+
+.perfil_menu .pmenu_indv .pmenu_precio p
+{
+    font-size: 14px;
+    line-height: 1em;
+    margin: 0;
+}
+
+.perfil_menu .pmenu_indv .pmenu_btn
+{
+    background: #fba919;
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 20%);
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 150px;
+    padding: 2px;
+}
+
+.perfil_infofinal
+{
+    text-align:right;
+}
+
+.perfil_infofinal p
+{
+    margin:0;
+}
+
+.perfil_infofinal a
+{
+    color:#151515;
+}
+
+
+
+
+

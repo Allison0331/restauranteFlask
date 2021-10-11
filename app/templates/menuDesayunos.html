@@ -1,0 +1,60 @@
+{% extends 'menu.html' %}
+<!---->
+
+
+{% block menu %}
+<!---->
+<h4 style="text-align: center;">DESAYUNOS</h4>
+<section class="imagenes" style="width: 100%;">
+    <div style="display: flex; ">
+        <div class="menuhorneados">
+            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/EBB_AvocadoVegOut.jpg') }}" alt="">
+            <div class="texto">
+                <div>Sandwich Vegano</div>
+            </div>
+        </div>
+
+        <div class="menuhorneados">
+            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/EBB-TurkeyBaconAvocado.jpg') }}" alt="">
+            <div class="texto">
+                <div>xxxxxxxxxxxxxxxxxx</div>
+            </div>
+        </div>
+
+        <div class="menuhorneados">
+            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/panespinaca.jpg') }}" alt="">
+            <div class="texto">
+                <div>xxxxxxxxxxxxxxxxxxxxxx</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="imagenes" style="width: 100%; top:20px">
+    <div style="display: flex;  height:60%;">
+        <div class="menuhorneados">
+            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/PizzaBagelCheese-1.jpg') }}" alt="">
+            <div class="texto">
+                <div>Pizza Baguel Queso</div>
+            </div>
+        </div>
+
+        <div class="menuhorneados">
+            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/PizzaBagelPepperoni.jpg') }}" alt="">
+            <div class="texto">
+                <div>Pizza Baguel Peperoni</div>
+            </div>
+        </div>
+
+        <div class="menuhorneados">
+            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/Sandwiches_TastyTurkey.jpg') }}" alt="">
+            <div class="texto">
+                <div>Sandwich Turquia</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!---->
+{% endblock menu %}

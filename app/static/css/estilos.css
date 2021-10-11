@@ -46,8 +46,11 @@ body {
 
 .imagenes {
     position: relative;
-    top: 30px;
-    margin-top: 20px;
+    top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    display: flex;
 }
 
 section {
@@ -66,8 +69,7 @@ section {
 
 .imagen {
     width: 100%;
-    height: calc(100% - 60px);
-    object-fit: cover;
+    height: 100%;
 }
 
 .mapa {
@@ -174,4 +176,29 @@ footer {
     /*background-color: #E7E7E7;*/
     margin: 0 auto;
     background-color: white;
+}
+
+
+/*FORMULARIO MENUS*/
+
+.menuhorneados {
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 100%;
+    border: steelblue solid 1px;
+    /*height: auto;*/
+}
+
+.imagenhorneados {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto {
+    width: 100%;
+    text-align: center;
+    border: steelblue solid 1px;
 }

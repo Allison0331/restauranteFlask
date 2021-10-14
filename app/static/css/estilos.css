@@ -90,8 +90,6 @@ body {
 }
 
 
-
-
 /*FOOTER*/
 
 
@@ -181,9 +179,6 @@ footer {
 }
 
 
-
-
-
 /*FORMULARIO MENUS*/
 
 .menuhorneados {
@@ -209,112 +204,85 @@ footer {
 }
 
 
-
 /*   estilos Alliz   */
 
-.foto_perfil
-{
+.foto_perfil {
     border-radius: 100%;
-    display:block;
+    display: block;
     height: 190px;
     margin: 0;
-    max-width:190px;
+    max-width: 190px;
     object-fit: cover;
 }
 
-.usuario_info
-{
-    font-size:18px;
+.usuario_info {
+    font-size: 18px;
 }
 
-.usuario_info a
-{
-    color:#151515;
+.usuario_info a {
+    color: #151515;
 }
 
 .usuario_info ul,
-.usuario_info ul li
-{
-    list-style:none;
-    margin:0;
-    padding:0;
+.usuario_info ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.usuario_info ul li.principal
-{
-    font-size:24px;
+.usuario_info ul li.principal {
+    font-size: 24px;
 }
 
-.usuario_info ul li i
-{
-    min-width:26px;
+.usuario_info ul li i {
+    min-width: 26px;
 }
 
-.usuario_enlaces
-{
-    font-size:14px;
+.usuario_enlaces {
+    font-size: 14px;
 }
 
-.usuario_enlaces h3
-{
+.usuario_enlaces h3 {
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .usuario_enlaces ul,
-.usuario_enlaces ul li
-{
-    list-style:none;
-    margin:0;
-    padding:0;
+.usuario_enlaces ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.usuario_enlaces ul li a
-{
-    color:#333;
+.usuario_enlaces ul li a {
+    color: #333;
 }
 
-.perfil_menu
-{
-    background:#fff;
+.perfil_menu {
+    background: #fff;
 }
 
-.perfil_menu
-{
-    
-}
+.perfil_menu {}
 
-.perfil_menu .pmenu_indv
-{
-    
-}
+.perfil_menu .pmenu_indv {}
 
-.perfil_menu .pmenu_indv .pmenu_foto
-{
-    
-}
+.perfil_menu .pmenu_indv .pmenu_foto {}
 
-.perfil_menu .pmenu_indv .pmenu_foto img
-{
+.perfil_menu .pmenu_indv .pmenu_foto img {
     height: 180px;
     object-fit: cover;
-    transition:0.3s all;
+    transition: 0.3s all;
     width: 100%;
 }
 
-.perfil_menu .pmenu_indv .pmenu_foto img:hover
-{  
+.perfil_menu .pmenu_indv .pmenu_foto img:hover {
     transform: scale(1.05);
 }
 
-.perfil_menu .pmenu_indv .pmenu_nombre
-{
-    
-}
+.perfil_menu .pmenu_indv .pmenu_nombre {}
 
-.perfil_menu .pmenu_indv .pmenu_nombre h4
-{
+.perfil_menu .pmenu_indv .pmenu_nombre h4 {
     color: #fba919;
     font-size: 20px;
     line-height: 1.4em;
@@ -322,20 +290,17 @@ footer {
     padding: 3px 0 0;
 }
 
-.perfil_menu .pmenu_indv .pmenu_precio
-{
-    margin-bottom:14px;
+.perfil_menu .pmenu_indv .pmenu_precio {
+    margin-bottom: 14px;
 }
 
-.perfil_menu .pmenu_indv .pmenu_precio p
-{
+.perfil_menu .pmenu_indv .pmenu_precio p {
     font-size: 14px;
     line-height: 1em;
     margin: 0;
 }
 
-.perfil_menu .pmenu_indv .pmenu_btn
-{
+.perfil_menu .pmenu_indv .pmenu_btn {
     background: #fba919;
     box-shadow: 1px 2px 4px rgb(0 0 0 / 20%);
     color: #fff;
@@ -346,45 +311,37 @@ footer {
     padding: 2px;
 }
 
-.perfil_infofinal
-{
-    text-align:right;
+.perfil_infofinal {
+    text-align: right;
 }
 
-.perfil_infofinal p
-{
-    margin:0;
+.perfil_infofinal p {
+    margin: 0;
 }
 
-.perfil_infofinal a
-{
-    color:#151515;
+.perfil_infofinal a {
+    color: #151515;
 }
 
-.menu_migajas
-{
-    background-color:rgba(255, 255, 255, 0.7);
-    font-size:14px;
+.menu_migajas {
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
 }
 
-.lista_deseos
-{
-    background-color:#fff;
+.lista_deseos {
+    background-color: #fff;
 }
 
-.tabs_system
-{
+.tabs_system {
     display: grid;
     grid-template-columns: 100px 1fr;
 }
-.tabs_system .tabs_indices
-{
 
-}
-.tabs_system .tabs_indices .tabs_indice_indv
-{
+.tabs_system .tabs_indices {}
+
+.tabs_system .tabs_indices .tabs_indice_indv {
     background-color: #f6f6f6;
-    border:1px solid #eee;
+    border: 1px solid #eee;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: -1px 1px 2px rgb(0 0 0 / 30%);
@@ -395,29 +352,35 @@ footer {
     padding: 7px 4px;
     text-decoration: none;
 }
-.tabs_system .tabs_indices .tabs_indice_indv.activo
-{
+
+.tabs_system .tabs_indices .tabs_indice_indv.activo {
     background-color: #fba919;
     color: #fff;
     font-weight: bold;
 }
-.tabs_system .tabs_contenidos
-{
+
+.tabs_system .tabs_contenidos {
     background-color: #f6f6f6;
-    border:1px solid #eee;
+    border: 1px solid #eee;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding:20px;
-
-}
-.tabs_system .tabs_contenidos .tab_contenido_indv
-{
-    display:none;
-}
-.tabs_system .tabs_contenidos .tab_contenido_indv.activo
-{
-    display:block;
+    padding: 20px;
 }
 
+.tabs_system .tabs_contenidos .tab_contenido_indv {
+    display: none;
+}
 
+.tabs_system .tabs_contenidos .tab_contenido_indv.activo {
+    display: block;
+}
 
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}

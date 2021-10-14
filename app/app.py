@@ -60,6 +60,9 @@ def editar_perfil():
     return render_template('editarPerfilUsuario.html')
 
 
+@app.route('/pedidos')
+def pedidos():
+    return render_template('pedidos.html')
 
 
 """"""

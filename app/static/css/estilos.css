@@ -367,3 +367,54 @@ footer {
     font-size:14px;
 }
 
+.lista_deseos
+{
+    background-color:#fff;
+}
+
+.tabs_system
+{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+.tabs_system .tabs_indices
+{
+
+}
+.tabs_system .tabs_indices .tabs_indice_indv
+{
+    background-color: #f6f6f6;
+    border:1px solid #eee;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -1px 1px 2px rgb(0 0 0 / 30%);
+    color: #151515;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 7px 4px;
+    text-decoration: none;
+}
+.tabs_system .tabs_indices .tabs_indice_indv.activo
+{
+    background-color: #fba919;
+    color: #fff;
+    font-weight: bold;
+}
+.tabs_system .tabs_contenidos
+{
+    background-color: #f6f6f6;
+    border:1px solid #eee;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:20px;
+
+}
+.tabs_system .tabs_contenidos .tab_contenido_indv
+{
+    display:none;
+}
+.tabs_system .tabs_contenidos .tab_contenido_indv.activo
+{
+    display:block;
+}

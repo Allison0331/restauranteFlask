@@ -19,115 +19,202 @@
 {% endblock menu_migajas %}
 <!---->
 {% block body %}
-<section id="perfil_info">
+<section id="lista_deseos" class="lista_deseos">
     <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-3">
-                <div class="perfil_foto">
-                    <img src="/static/imagenes/perfil.jpeg" alt="Foto perfil del usuario"
-                        class="w-100 foto_perfil m-auto m-md-0 mb-4 mb-md-0">
+        <h2 class="text-center mb-5">Lista de deseos</h2>
+        <div class="tabs_system">
+            <div class="tabs_indices">
+                <a href="#" class="tabs_indice_indv activo">Horneados</a>
+                <a href="#" class="tabs_indice_indv">Desayunos</a>
+                <a href="#" class="tabs_indice_indv">Bebidas</a>
+            </div>
+            <div class="tabs_contenidos">
+                <div class="tab_contenido_indv activo">
+                   <div class="container-fluid perfil_menu">
+                       <div class="row">
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/perfil_menu_1.jpg" alt="Rosca de Chocolate"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>1 Rosca de Chocolate</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$13.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/perfil_menu_2.jpg" alt="Hamburguesa Veggie"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>Hamburguesa Veggie</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$21.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/perfil_menu_3.jpg" alt="Batido de Fresa"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>Batido de Fresa</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$9.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/perfil_menu_4.jpg" alt="Pizza Italiana"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>Pizza Italiana</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$19.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="tab_contenido_indv">
+                    <div class="container-fluid perfil_menu">
+                        <div class="row">
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_1.jpg" alt="Rosca de Chocolate"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>2 Rosca de Chocolate</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$13.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_2.jpg" alt="Hamburguesa Veggie"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Hamburguesa Veggie</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$21.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_3.jpg" alt="Batido de Fresa"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Batido de Fresa</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$9.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_4.jpg" alt="Pizza Italiana"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Pizza Italiana</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$19.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_contenido_indv">
+                    <div class="container-fluid perfil_menu">
+                        <div class="row">
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_1.jpg" alt="Rosca de Chocolate"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>3 Rosca de Chocolate</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$13.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_2.jpg" alt="Hamburguesa Veggie"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Hamburguesa Veggie</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$21.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_3.jpg" alt="Batido de Fresa"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Batido de Fresa</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$9.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/perfil_menu_4.jpg" alt="Pizza Italiana"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Pizza Italiana</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$19.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 mb-4 mb-md-0 usuario_info">
-                <ul>
-                    <li class="principal">
-                        <i class="fas fa-user-circle"></i> Hola, <strong>Guiacomo Guilliz</strong>
-                    </li>
-                    <li>
-                        <i class="far fa-envelope"></i> <a href="mailto:guiac2314@hotmail.com">guiac2314@hotmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-street-view"></i> Av. 6 No. 23-45 Cali, Colombia
-                    </li>
-                    <li>
-                        <i class="fas fa-birthday-cake"></i> 9 de Sept / 1994
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-3 usuario_enlaces">
-                <h3>Opciones de usuario:</h3>
-                <ul>
-                    <li>
-                        <i class="fa fa-user-edit"></i> <a href="{{ url_for('editar_perfil') }}">Editar Perfil</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-eye"></i> <a href="#">Ver mis calificaciones</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-list-alt"></i> <a href="#">Lista de deseos</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-cart-arrow-down"></i> <a href="#">Mis pedidos</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-search"></i> <a href="#">Buscar platos</a>
-                    </li>
-                </ul>
-            </div>
-
         </div>
     </div>
 
 </section>
 <section id="perfil_menu" class="container-fluid py-5 perfil_menu">
-    <h2 class="text-center mb-5">Este es nuestro menú del día</h2>
     <div class="row">
         <div class="col-12">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
-                        <div class="pmenu_foto">
-                            <a href="#"><img src="/static/imagenes/perfil_menu_1.jpg" alt="Rosca de Chocolate"></a>
-                        </div>
-                        <div class="pmenu_nombre">
-                            <h4>Rosca de Chocolate</h4>
-                        </div>
-                        <div class="pmenu_precio">
-                            <p>$13.000</p>
-                        </div>
-                        <a href="#" class="btn pmenu_btn">Ver producto</a>
-
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
-                        <div class="pmenu_foto">
-                            <a href="#"><img src="/static/imagenes/perfil_menu_2.jpg" alt="Hamburguesa Veggie"></a>
-                        </div>
-                        <div class="pmenu_nombre">
-                            <h4>Hamburguesa Veggie</h4>
-                        </div>
-                        <div class="pmenu_precio">
-                            <p>$21.000</p>
-                        </div>
-                        <a href="#" class="btn pmenu_btn">Ver producto</a>
-
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
-                        <div class="pmenu_foto">
-                            <a href="#"><img src="/static/imagenes/perfil_menu_3.jpg" alt="Batido de Fresa"></a>
-                        </div>
-                        <div class="pmenu_nombre">
-                            <h4>Batido de Fresa</h4>
-                        </div>
-                        <div class="pmenu_precio">
-                            <p>$9.000</p>
-                        </div>
-                        <a href="#" class="btn pmenu_btn">Ver producto</a>
-
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
-                        <div class="pmenu_foto">
-                            <a href="#"><img src="/static/imagenes/perfil_menu_4.jpg" alt="Pizza Italiana"></a>
-                        </div>
-                        <div class="pmenu_nombre">
-                            <h4>Pizza Italiana</h4>
-                        </div>
-                        <div class="pmenu_precio">
-                            <p>$19.000</p>
-                        </div>
-                        <a href="#" class="btn pmenu_btn">Ver producto</a>
-
-                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -74,7 +74,7 @@ def iniciar_sesion():
     
 
 
-
+"""RUTAS DEL MENU"""
     
 
 @app.route('/menu')
@@ -95,6 +95,26 @@ def menu_desayunos():
 @app.route('/menu/bebidas')
 def menu_bebidas():
     return render_template('/menuBebidas.html')
+
+
+"""RUTAS PARA EL MANEJO DE LA BASE DE DATOS BACK-END"""
+@app.route('/crear_usuario' , methods =('GET' , 'POST'))
+def crear_usuario(codigo):
+    codigousuario = codigo
+    return "Crear Usuario"
+
+@app.route('/Modificar_usuario' , methods =('GET' , 'POST'))
+def crear_usuario(codigo):
+    codigousuario = codigo
+    return "Modificar Usuario"
+
+@app.route('/Consultar_usuarios' , methods =('GET' , 'POST'))
+def crear_usuario():
+    return "Consultar Usuarios"
+
+
+
+
 
 
 if __name__ == '__main__':

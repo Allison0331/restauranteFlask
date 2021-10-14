@@ -6,7 +6,8 @@
 
 
 <a href="{{url_for('index')}}">
-    <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Cerrar Sesión</button>
+    <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Cerrar
+        Sesión</button>
 </a>
 
 {% endblock boton_info %}
@@ -27,7 +28,8 @@
         <div class="row align-items-center">
             <div class="col-12 col-md-3">
                 <div class="perfil_foto">
-                    <img src="/static/imagenes/perfil.jpeg" alt="Foto perfil del usuario" class="w-100 foto_perfil m-auto m-md-0 mb-4 mb-md-0">
+                    <img src="/static/imagenes/perfil.jpeg" alt="Foto perfil del usuario"
+                        class="w-100 foto_perfil m-auto m-md-0 mb-4 mb-md-0">
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-4 mb-md-0 usuario_info">
@@ -53,7 +55,8 @@
                         <i class="fa fa-user-edit"></i> <a href="{{ url_for('editar_perfil') }}">Editar Perfil</a>
                     </li>
                     <li>
-                        <i class="fa fa-eye"></i> <a href="1">Ver mis calificaciones_</a>
+                        <i class="fa fa-eye"></i> <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#misCalificaciones">Ver mis calificaciones_</a>
                     </li>
                     <li>
                         <i class="fas fa-list-alt"></i> <a href="{{ url_for('lista_deseos') }}">Lista de deseos</a>
@@ -62,7 +65,8 @@
                         <i class="fas fa-cart-arrow-down"></i> <a href="#">Mis pedidos</a>
                     </li>
                     <li>
-                        <i class="fas fa-search"></i> <a href="#">Buscar platos</a>
+                        <i class="fas fa-search"></i> <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#buscarPlatos">Buscar platos</a>
                     </li>
                 </ul>
             </div>
@@ -147,4 +151,88 @@
     </div>
 </aside>
 
+<!-- Modal -->
+<div class="modal fade" id="misCalificaciones" tabindex="-1" aria-labelledby="misCalificacionesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="misCalificacionesLabel">Mis calificaciones</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container d-flexr">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Platos:
+                        </div>
+                        <div class="col-md-9">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Atención:
+                        </div>
+                        <div class="col-md-9">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Creatividad:
+                        </div>
+                        <div class="col-md-9">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="buscarPlatos" tabindex="-1" aria-labelledby="buscarPlatosLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buscarPlatosLabel">Buscar platos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container d-flexr">
+                    <div class="row mb-2">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Ingresa el plato que deseas buscar">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock body %}

@@ -104,12 +104,12 @@ def crear_usuario(codigo):
     return "Crear Usuario"
 
 @app.route('/Modificar_usuario' , methods =('GET' , 'POST'))
-def crear_usuario(codigo):
+def modificar_usuario(codigo):
     codigousuario = codigo
     return "Modificar Usuario"
 
 @app.route('/Consultar_usuarios' , methods =('GET' , 'POST'))
-def crear_usuario():
+def consultar_usuarios():
     return "Consultar Usuarios"
 
 

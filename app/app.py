@@ -51,6 +51,10 @@ def platos():
 def perfil():
     return render_template('editar_perfil.html')
 
+@app.route('/lista_deseos')
+def lista_deseos():
+    return render_template('listaDeseos.html')
+
 @app.route('/perfil_usuario/editar_perfil')
 def editar_perfil():
     return render_template('editarPerfilUsuario.html')

@@ -9,25 +9,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //console.log( url );
     //console.log( title );
 
-    //facebook
-    $('#share-wa').attr('data-url', url).attr('data-title', title).attr('data-sharer', 'whatsapp');
-    //facebook
-    $('#share-fb').attr('data-url', url).attr('data-sharer', 'facebook');
-    //twitter
-    $('#share-tw').attr('data-url', url).attr('data-title', title).attr('data-via', via).attr('data-sharer', 'twitter');
-    //linkedin
-    $('#share-li').attr('data-url', url).attr('data-sharer', 'linkedin');
-    // google plus
-    $('#share-gp').attr('data-url', url).attr('data-title', title).attr('data-sharer', 'googleplus');
-    // email
-    $('#share-em').attr('data-url', url).attr('data-title', title).attr('data-subject', subject).attr('data-sharer', 'email');
-
-    //Prevent basic click behavior
-    $(".sharer button").click(function() {
-        event.preventDefault();
-    });
-
-
     // only show whatsapp on mobile devices  
     var isMobile = false; //initiate as false
     // device detection
@@ -36,9 +17,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         isMobile = true;
     }
 
-    if (isMobile == true) {
-        $("#share-wa").hide();
-    }
+    // Scripts hechos por Alliz
+
+    document.querySelectorAll('.tabs_system .tabs_indices .tabs_indice_indv').forEach(function(cadaUno, indice){
+        cadaUno.addEventListener('click', function(esto){
+            esto.preventDefault()
+            document.querySelectorAll('.tabs_system .tabs_indices .tabs_indice_indv').forEach(function(cadaUno2){ cadaUno2.classList.remove('activo') })
+            document.querySelectorAll('.tabs_system .tabs_indices .tabs_indice_indv')[indice].classList.add('activo')
+            document.querySelectorAll('.tabs_system .tabs_contenidos .tab_contenido_indv').forEach(function(cadaUno2){ cadaUno2.classList.remove('activo') })
+            document.querySelectorAll('.tabs_system .tabs_contenidos .tab_contenido_indv')[indice].classList.add('activo')
+        })
+    })
 
 
 

@@ -15,7 +15,11 @@
     />
 
     <link href="{{ url_for('static', filename = 'css/estilos.css') }}" rel="stylesheet">
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 101ea0a7111f9ba40b382322530de7cf3040d8bc
 </head>
 
 <body>
@@ -35,7 +39,7 @@
                                 <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url_for('menu')}}">Menu</a>
+                                <a class="nav-link" href="{{url_for('menu_horneados')}}">Menu</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Domicilios</a>
@@ -44,10 +48,7 @@
                                 <a class="nav-link" href="#">Contactenos</a>
                             </li>
 
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Buscar</button>
-                            </form>
+
 
 
                         </ul>
@@ -56,7 +57,15 @@
                 </div>
 
             </nav>
-
+            <div class="menu_migajas">
+                <div class="container py-2 ">
+                    <div class="row">
+                        <div class="col-12">
+                            {% block menu_migajas %} {% endblock menu_migajas %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
     </div>
 
@@ -84,11 +93,15 @@
         </footer>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 
     <script src="{{ url_for('static', filename = 'js/estilos.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
+
+
 
 </body>
 

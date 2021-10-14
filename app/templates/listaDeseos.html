@@ -1,0 +1,235 @@
+{% extends 'layout.html' %}
+<!---->
+
+{% block boton_info %}
+<a href="{{url_for('index')}}">
+    <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Cerrar
+        Sesión</button>
+</a>
+{% endblock boton_info %}
+{% block menu_migajas %}
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+    aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/editar_perfil">Perfil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lista de deseos</li>
+    </ol>
+</nav>
+{% endblock menu_migajas %}
+<!---->
+{% block body %}
+<section id="lista_deseos" class="lista_deseos">
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Lista de deseos</h2>
+        <div class="tabs_system">
+            <div class="tabs_indices">
+                <a href="#" class="tabs_indice_indv activo">Horneados</a>
+                <a href="#" class="tabs_indice_indv">Desayunos</a>
+                <a href="#" class="tabs_indice_indv">Bebidas</a>
+            </div>
+            <div class="tabs_contenidos">
+                <div class="tab_contenido_indv activo">
+                   <div class="container-fluid perfil_menu">
+                       <div class="row">
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/Horneados/chocolatebirth.jpg" alt="Rosca de Chocolate"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>Rosca de Chocolate</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$13.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/Horneados/churroparty.jpg" alt="Churro Party"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>Churro Party</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$21.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/Horneados/cinamonraysy.jpg" alt="cinamonraysy"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>Cinamonraysy</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$9.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                <div class="pmenu_foto">
+                                    <a href="#"><img src="/static/imagenes/perfil_menu_4.jpg" alt="Pizza Italiana"></a>
+                                </div>
+                                <div class="pmenu_nombre">
+                                    <h4>Pizza Italiana</h4>
+                                </div>
+                                <div class="pmenu_precio">
+                                    <p>$19.000</p>
+                                </div>
+                                <a href="#" class="btn pmenu_btn">Ver producto</a>
+        
+                            </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="tab_contenido_indv">
+                    <div class="container-fluid perfil_menu">
+                        <div class="row">
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Desayuno_Almuerzo/EBB_AvocadoVegOut.jpg" alt="Hamburguesa Veggie"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Hamburguesa Veggie</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$21.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Desayuno_Almuerzo/PizzaBagelCheese-1.jpg" alt="Hamburguesa Turca"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Harmburguesa Turca</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$21.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Desayuno_Almuerzo/panespinaca.jpg" alt="Pan de espinaca"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Pan de espinaca</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$3.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Desayuno_Almuerzo/PizzaBagelCheese-1.jpg" alt="Bagel Cheese"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Bagel Cheese</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$19.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_contenido_indv">
+                    <div class="container-fluid perfil_menu">
+                        <div class="row">
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Bebidas/tehelado.jpg" alt="Te helado"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Té Helado</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$5.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Bebidas/batidovainilla.jpg" alt="Batido de vainilla"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Batido Vainilla</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$8.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Bebidas/batidobananafresa.jpg" alt="Batido de Fresa"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Batido de Fresa</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$9.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                             <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
+                                 <div class="pmenu_foto">
+                                     <a href="#"><img src="/static/imagenes/Bebidas/batidocaramelo.jpg" alt="Batido de caramelo"></a>
+                                 </div>
+                                 <div class="pmenu_nombre">
+                                     <h4>Batido de caramelo</h4>
+                                 </div>
+                                 <div class="pmenu_precio">
+                                     <p>$9.000</p>
+                                 </div>
+                                 <a href="#" class="btn pmenu_btn">Ver producto</a>
+         
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="perfil_menu" class="container-fluid py-5 perfil_menu">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<aside id="perfil_infofinal" class="perfil_infofinal">
+    <div class="container pt-5 pb-1">
+        <div class="row">
+            <div class="col-12">
+                <p>Se unió el 12 de enero de 2021</p>
+                <p><strong>Última actividad:</strong> 12 de septiembre de 2021</p>
+                <p><a href="#">Desactivar cuenta</a></p>
+            </div>
+        </div>
+    </div>
+</aside>
+
+{% endblock body %}

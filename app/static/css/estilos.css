@@ -263,12 +263,6 @@ footer {
     background: #fff;
 }
 
-.perfil_menu {}
-
-.perfil_menu .pmenu_indv {}
-
-.perfil_menu .pmenu_indv .pmenu_foto {}
-
 .perfil_menu .pmenu_indv .pmenu_foto img {
     height: 180px;
     object-fit: cover;
@@ -279,8 +273,6 @@ footer {
 .perfil_menu .pmenu_indv .pmenu_foto img:hover {
     transform: scale(1.05);
 }
-
-.perfil_menu .pmenu_indv .pmenu_nombre {}
 
 .perfil_menu .pmenu_indv .pmenu_nombre h4 {
     color: #fba919;
@@ -336,8 +328,6 @@ footer {
     display: grid;
     grid-template-columns: 100px 1fr;
 }
-
-.tabs_system .tabs_indices {}
 
 .tabs_system .tabs_indices .tabs_indice_indv {
     background-color: #f6f6f6;

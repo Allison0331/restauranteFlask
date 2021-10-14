@@ -3,11 +3,22 @@
 
 {% block boton_info %}
 
+
+
 <a href="{{url_for('index')}}">
     <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Cerrar Sesión</button>
 </a>
 
 {% endblock boton_info %}
+{% block menu_migajas %}
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+    aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Perfil</li>
+    </ol>
+</nav>
+{% endblock menu_migajas %}
 <!---->
 {% block body %}
 
@@ -42,10 +53,10 @@
                         <i class="fa fa-user-edit"></i> <a href="{{ url_for('editar_perfil') }}">Editar Perfil</a>
                     </li>
                     <li>
-                        <i class="fa fa-eye"></i> <a href="#">Ver mis calificaciones</a>
+                        <i class="fa fa-eye"></i> <a href="1">Ver mis calificaciones_</a>
                     </li>
                     <li>
-                        <i class="fas fa-list-alt"></i> <a href="{{ url_for('listaDeseos') }}">Lista de deseos</a>
+                        <i class="fas fa-list-alt"></i> <a href="{{ url_for('lista_deseos') }}">Lista de deseos</a>
                     </li>
                     <li>
                         <i class="fas fa-cart-arrow-down"></i> <a href="#">Mis pedidos</a>

@@ -15,6 +15,7 @@
     />
 
     <link href="{{ url_for('static', filename = 'css/estilos.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,7 +53,15 @@
                 </div>
 
             </nav>
-
+            <div class="menu_migajas">
+                <div class="container py-2 ">
+                    <div class="row">
+                        <div class="col-12">
+                            {% block menu_migajas %} {% endblock menu_migajas %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
     </div>
 

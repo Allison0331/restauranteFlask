@@ -2,21 +2,30 @@
 <!---->
 
 {% block boton_info %}
-
 <a href="{{url_for('index')}}">
-    <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Cerrar Sesión</button>
+    <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Cerrar
+        Sesión</button>
 </a>
-
 {% endblock boton_info %}
+{% block menu_migajas %}
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+    aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="/editar_perfil">Perfil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lista de deseos</li>
+    </ol>
+</nav>
+{% endblock menu_migajas %}
 <!---->
 {% block body %}
-
 <section id="perfil_info">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-12 col-md-3">
                 <div class="perfil_foto">
-                    <img src="/static/imagenes/perfil.jpeg" alt="Foto perfil del usuario" class="w-100 foto_perfil m-auto m-md-0 mb-4 mb-md-0">
+                    <img src="/static/imagenes/perfil.jpeg" alt="Foto perfil del usuario"
+                        class="w-100 foto_perfil m-auto m-md-0 mb-4 mb-md-0">
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-4 mb-md-0 usuario_info">

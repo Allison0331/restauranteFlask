@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+<!---->
+
+{% block body %}
+<!---->
+<div class="container" id="advanced-search-form" style="margin-top: 10px;">
+    <form action="/ingresar" method="post" class="formulario" style="font-size: 12;">
+
+        <h6 style="text-align: center;">EDITAR PERFIL DE USUARIO</h6>
+        <div class="form-group">
+            <label for="nombres">Nombres</label>
+            <input style="border-radius: 5px;" size="35" type="text " placeholder="nombres " id="nombres ">
+
+            <label for=""> &nbsp Sexo &nbsp &nbsp
+                <label class="form-check-label" for="flexRadioDefault1"> F</label>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Masculino">
+
+            <label class="form-check-label" for="flexRadioDefault2"> &nbsp M</label>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+
+
+            </label>
+
+        </div>
+
+
+        <div class="form-group " style="margin-top: 5px;">
+            <label for="apellidos ">apellidos</label>
+            <input style="border-radius: 5px;" size="60" type="text " placeholder="Apellidos " id="apellidos">
+        </div>
+
+        <div class="form-group" style="margin-top: 5px;">
+            <label for="tipo"> Tipo ID</label>
+            <select id="tipo" aria-label="Default select example">
+            <option selected>Seleccione</option>
+            <option value="1">CC</option>
+            <option value="2">TI</option>
+            <option value="3">CE</option>
+            <option value="3">PASAPORTE</option>
+          </select>
+
+            <label for="documento"> &nbsp  &nbsp No. Documento &nbsp &nbsp </label>
+            <input type="text" size="26" style="border-radius: 5px;" id="documento">
+        </div>
+
+
+        <div class="form-group " style="margin-top: 5px;">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha ">
+
+
+            <label for="telefono ">&nbsp  &nbsp No. Telefono &nbsp  &nbsp</label>
+            <input type="text " placeholder="fijo / celular " id="telefono" style="border-radius: 5px;" size="22">
+
+        </div>
+
+
+
+        <div class="form-group " style="margin-top: 5px;">
+            <label for="direccion ">Direccion</label>
+            <input type="text " id="direccion " style="border-radius: 5px;" size="60">
+        </div>
+
+
+        <div class="form-check" style="text-align: right;">
+            <input type="checkbox" style="text-align: right;" value="" id="flexCheckDefault" checked>
+            <label class="form-check-label" for="flexCheckDefault">
+              Aceptar condiciones y tratamiento de datos
+            </label>
+        </div>
+        <div class="form-check" style="text-align: right;">
+            <input style="text-align: right;" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Desea recibir ofertas en su correo electronico
+            </label>
+        </div>
+
+        <div class="col-md-12 col-md-offset-2">
+            <div class="card">
+
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <a href="{{ url_for('perfil') }}">
+                        <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Regresar al Inicio</button>
+                    </a>
+                    <a href="#" class="btn btn-primary btn-sm float-right">Actualizar Datos</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-body">
+
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

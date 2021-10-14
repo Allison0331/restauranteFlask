@@ -13,22 +13,64 @@ def index():
 def ingresar():
     return render_template('ingresar.html')
 
-@app.route('/editar_perfil')
-def editar_perfil():
-    return render_template('editar_perfil.html')
 
 @app.route('/registro_usuario')
 def registro_usuario():
     return render_template('registro.html')
 
 
+""" RUTAS PARA EL DASHBOARD ADMINISTRATIVO """
+
+@app.route('/Admin')
+def Admin():
+    return render_template('dashAdministrativo.html')
+
+
+@app.route('/dashUser3')
+def dashUser3():
+    return render_template('dashUser3.html')
+
+
+@app.route('/regDashUser')
+def regDashUser():
+    return render_template('registrarDashUser.html')
+
+
+@app.route('/layout')
+def layout():
+    return render_template('layoutDashboard.html')
+
+
+@app.route('/platos')
+def platos():
+    return render_template('dashPlatos3.html')  
+
+
+"""RUTAS DEL PERFIL DE USUARIO"""
+@app.route('/editar_perfil')
+def perfil():
+    return render_template('editar_perfil.html')
+
+@app.route('/perfil_usuario/editar_perfil')
+def editar_perfil():
+    return render_template('editarPerfilUsuario.html')
+
+
+
+
+""""""
+
 @app.route('/iniciar_sesion' , methods = ['POST'])
 def iniciar_sesion():
     nombreUser = request.form['nombreUser']
+    if nombreUser == "admin":
+        return Admin()
+    else:
+        return render_template('editar_perfil.html')
     
-    return eg.msgbox(msg='Bienvenido' + nombreUser,
-          title='Control: msgbox', 
-          ok_button='Continuar')
+
+
+
     
 
 @app.route('/menu')

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../static/css/estiloDashAdmin.css" />
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet" />
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
+
+    <link href="../static/css/estiloDashUser2.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    /> -->
+
+
+    <!--Los siguientes archivos de biblioteca CSS se cargan para usar en este ejemplo para proporcionar el estilo de la tabla:-->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"/> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css" />
+
+
+
+
+
+
+    <title>Dashboard Administrativo</title>
+
+    <!-- Nuevo DashUser -->
+</head>
+
+<body style="background-color: beige;">
+    <div class="d-flex" id="content-wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <h4 class="centrado font-weight-bold mb-0" style="color:black;">
+                    DASHBOARD ADMINISTRATIVO
+                </h4>
+            </div>
+
+            <div class="centrado">
+                <img src=" {{ url_for('static', filename = 'imagenes/icono_logo.png') }}" alt="..." width="100" height="91">
+            </div>
+
+            <div class="menu">
+                <a href="#" class="d-block p-3 border-0" style="color:black;"><i class="icon ion-md-apps lead mr-2"></i>Inicio</a >
+            
+
+
+          <div class="dropdown">
+              <a
+              href="{{url_for('dashUser3')}}"
+              class="d-block  p-3 border-0 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
+              <i class="icon ion-md-people lead mr-2" ></i> Gestionar Usuarios</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{{url_for('dashUser3')}}">Ver Usuarios</a>
+                    <a class="dropdown-item" href="{{url_for('regDashUser')}}">Crear Usuarios</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown">
+                <a href="{{url_for('dashUser3')}}" class="d-block  p-3 border-0 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
+                    <i class="icon ion-md-menu lead mr-2"></i> Gestionar Platos</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{{url_for('platos')}}">Ver Platos</a>
+                    <a class="dropdown-item" href="{{url_for('platos')}}">Crear Platos</a>
+                </div>
+            </div>
+
+
+
+            <a href="{{url_for('Admin')}}" class="d-block p-3 border-0" style="color:black;"><i class="icon ion-md-stats lead mr-2"></i> Estadísticas</a
+          >
+         
+          <a
+            href="{{url_for('index')}}"
+            class="d-block p-3 border-0" style="color:black;"
+          >
+            <i class="icon ion-md-settings lead mr-2"></i> Cerrar Sesion</a
+          >
+        </div>
+      </div>
+      <!-- Fin sidebar -->
+
+      <div class="w-100">
+        <!-- Navbar -->
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- <form class="form-inline position-relative d-inline-block my-2">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Buscar"
+                  aria-label="Buscar"
+                />
+                <button class="btn position-absolute btn-search" type="submit">
+                  <i class="icon ion-md-search"></i>
+                </button>
+              </form> -->
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link text-dark dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="../static/imagenes/user-2.png"
+                      class="img-fluid rounded-circle avatar mr-2"
+                      alt="https://generated.photos/"
+                    />
+                    Zuleydis Barrios
+                  </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Mi perfil</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{url_for('ingresar')}}">Cerrar sesión</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Fin Navbar -->
+        
+        <!-- Page Content -->
+        
+        <div id="content" class="bg-grey w-100">
+          <section class="bg-light py-3">
+            <div class="container-fluid">
+              
+                      <div class="row">
+                          <div class="col col-lg-12 col-md-12">
+                            {% block contentDash %}{% endblock contentDash %}                        
+                          </div>
+                         
+                      </div>
+                  </div>
+          </section>
+
+       </div>
+      </div>
+    </div>
+  
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+
+    
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+
+  </body>
+</html>

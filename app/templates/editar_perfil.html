@@ -8,8 +8,7 @@
 </a>
 
 {% endblock boton_info %}
-
-
+<!---->
 {% block body %}
 
 <section id="perfil_info">
@@ -40,7 +39,7 @@
                 <h3>Opciones de usuario:</h3>
                 <ul>
                     <li>
-                        <i class="fa fa-user-edit"></i> <a href="#">Editar Perfil</a>
+                        <i class="fa fa-user-edit"></i> <a href="{{ url_for('editar_perfil') }}">Editar Perfil</a>
                     </li>
                     <li>
                         <i class="fa fa-eye"></i> <a href="#">Ver mis calificaciones</a>
@@ -59,7 +58,7 @@
 
         </div>
     </div>
-    
+
 </section>
 <section id="perfil_menu" class="container-fluid py-5 perfil_menu">
     <h2 class="text-center mb-5">Este es nuestro menú del día</h2>
@@ -79,7 +78,7 @@
                             <p>$13.000</p>
                         </div>
                         <a href="#" class="btn pmenu_btn">Ver producto</a>
-                        
+
                     </div>
                     <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
                         <div class="pmenu_foto">
@@ -92,7 +91,7 @@
                             <p>$21.000</p>
                         </div>
                         <a href="#" class="btn pmenu_btn">Ver producto</a>
-                        
+
                     </div>
                     <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
                         <div class="pmenu_foto">
@@ -105,7 +104,7 @@
                             <p>$9.000</p>
                         </div>
                         <a href="#" class="btn pmenu_btn">Ver producto</a>
-                        
+
                     </div>
                     <div class="col-12 col-sm-6 col-md-3 mb-5 mb-md-0 pmenu_indv">
                         <div class="pmenu_foto">
@@ -118,7 +117,7 @@
                             <p>$19.000</p>
                         </div>
                         <a href="#" class="btn pmenu_btn">Ver producto</a>
-                        
+
                     </div>
                 </div>
             </div>

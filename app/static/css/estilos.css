@@ -371,6 +371,21 @@ footer {
     overflow: auto;
 }
 
+<<<<<<< HEAD
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+
+    .centrado {
+        text-align: center;
+      }
+=======
 .table-wrapper-scroll-y {
     display: block;
 }
+>>>>>>> 101ea0a7111f9ba40b382322530de7cf3040d8bc

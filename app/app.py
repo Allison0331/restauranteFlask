@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('pedidos.html')
     
 
 @app.route('/ingresar')
@@ -17,6 +17,30 @@ def ingresar():
 @app.route('/registro_usuario')
 def registro_usuario():
     return render_template('registro.html')
+
+""" RUTAS PARA EL DASHBOARD ADMINISTRATIVO """
+
+@app.route('/Admin')
+def Admin():
+    return render_template('dashAdministrativo.html')
+
+@app.route('/dashUser3')
+def dashUser3():
+    return render_template('dashUser3.html')
+
+@app.route('/regDashUser')
+def regDashUser():
+    return render_template('registrarDashUser.html')
+
+@app.route('/layout')
+def layout():
+    return render_template('layoutDashboard.html')
+
+@app.route('/platos')
+def platos():
+    return render_template('dashPlatos3.html')  
+
+
 
 
 """ RUTAS PARA EL DASHBOARD ADMINISTRATIVO """
@@ -77,7 +101,6 @@ def iniciar_sesion():
     
 
 
-"""RUTAS DEL MENU"""
     
 
 @app.route('/menu')

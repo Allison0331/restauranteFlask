@@ -4,43 +4,134 @@
 
 {% block menu %}
 <!---->
-<h4 style="text-align: center;">HORNEADOS</h4>
-<section class="imagenes" style="width: 100%;">
-    <div style="display: flex; ">
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Horneados/chocolatebirth.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Panecillo Chocolate Chispa</div>
-            </div> -->
+<h4 style="text-align: center;color:white; background-color:rgb(53, 27, 3);">HORNEADOS</h4>
+
+<section id="contedidoPage" class="mt-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div class="col text-center text-uppercase">
+                    <small>Escoge tu horneado preferido</small>
+                </div>
+            </div>
         </div>
 
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Horneados/churroparty.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Panecillo Glaseado</div>
-            </div> -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Panecillo Chocolate con chispas</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/chocolatebirth.jpg') }}"
+                        class="card-img-top" alt="chocolatebirth">
+                    <p>
+                        Delicioso horneado con recubrimiento de chocolate original, receta unica de la casa. <br>
+                        Precio: $39.000
+                    </p>
+                </div>
+               <p class="d-grid gap-2 d-md-block centrado">
+                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+              </p>    
+            </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Panecillo Glaseado</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/churroparty.jpg') }}"
+                        class="card-img-top" alt="churroparty">
+                    <p>
+                        Delicioso panecillo glaseado relleno de queso cheddar y chispas de anis. <br>
+                        Precio: $25.000
+                    </p>
+                </div>
+                <p class="d-grid gap-2 d-md-block centrado">
+                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+                  </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Panecillo de canela</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/cinamonraysy.jpg') }}"
+                        class="card-img-top" alt="panecillo de canela">
+                    <p>
+                        Mira esta delicioso menú panecillo de panela. Genial para endulzar tus días. <br>
+                        Precio: $30.000
+                    </p>
+                </div>
+                <p class="d-grid gap-2 d-md-block centrado">
+                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+                  </p>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Pan horneado relleno de bocadillo</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/greekyogurtchery.jpg') }}"
+                        class="card-img-top" alt="greekyogurtchery">
+                    <p>
+                        Disfruta de nuestra especialidad en horneados, solicita este delicioso pan de bocadillo. Edición limitada<br>
+                        Precio: $32.000
+                    </p>
+                </div>
+                <p class="d-grid gap-2 d-md-block centrado">
+                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+                  </p>
+            </div>
+        </div>
+ 
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title centrado"><strong>Pan integral sin levadura</strong> </h5>
+                <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/PanIntegral.jpg') }}"
+                    class="card-img-top" alt="PanIntegral">
+                <p>Delicioso pan integral con AVENA , hornado, sin amasar y sin levadura!. Aprovecha esta saludable delicia.<br>
+                    Precio: $15.000
+                </p>
+            </div>
+            <p class="d-grid gap-2 d-md-block centrado">
+                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+              </p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title centrado"><strong>Pan de Campo</strong> </h5>
+                <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/PandeCampo.jpg') }}"
+                    class="card-img-top" alt="Pan de Campo">
+                <p>
+                   Delicioso Pan Recién Horneado, con las mejores especias del campo, disfruta de su inigualable sabor. <br>
+                    Precio: $28.000
+                </p>
+            </div>
+            <p class="d-grid gap-2 d-md-block centrado">
+                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+              </p>
+        </div>
+    </div>
+
+
+
+
 
     </div>
-</section>
-
-<section class="imagenes" style="width: 100%; top:20px">
-    <div style="display: flex;  height:60%;">
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Horneados/cinamonraysy.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Panecillo Canela</div>
-            </div> -->
-        </div>
-
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Horneados/greekyogurtchery.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Bagel Cereza y Yogurt Griego Canela</div>
-            </div> -->
-        </div>
-
-    </div>
-</section>
+</section> 
 <!---->
 {% endblock menu %}

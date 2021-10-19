@@ -3,9 +3,31 @@
     width: 100%;
 }
 
+
+
+
+/* Estilo Carousel */
+#main .carousel-inner img{
+   max-height: 70vh;
+   object-fit: cover;
+
+}
+
+#carouselExampleCaptions{
+    position: relative;
+}
+
 body {
     background-color: bisque;
 }
+
+/* Estilo navbar */
+.textNormal{
+    color: #381406 !important;
+    font-weight: bold;
+    
+}
+
 
 .right {
     /*
@@ -119,6 +141,7 @@ footer {
 
 
 /* FORMULARIO DE INICIO DE SESION*/
+
 
 
 /* FORMULARIO DE REGISTRO DE USUARIOS*/
@@ -316,7 +339,7 @@ footer {
 }
 
 .menu_migajas {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(238, 238, 238, 0.753);
     font-size: 14px;
 }
 
@@ -371,7 +394,6 @@ footer {
     overflow: auto;
 }
 
-<<<<<<< HEAD
 .my-custom-scrollbar {
     position: relative;
     height: 200px;
@@ -384,8 +406,3 @@ footer {
     .centrado {
         text-align: center;
       }
-=======
-.table-wrapper-scroll-y {
-    display: block;
-}
->>>>>>> 101ea0a7111f9ba40b382322530de7cf3040d8bc

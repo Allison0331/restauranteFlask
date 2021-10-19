@@ -40,7 +40,6 @@ def layout():
 def platos():
     return render_template('dashPlatos3.html')  
 
-
 """RUTAS DEL PERFIL DE USUARIO"""
 @app.route('/editar_perfil')
 def perfil():
@@ -71,8 +70,7 @@ def iniciar_sesion():
         return render_template('editar_perfil.html')
     
 
-
-    
+   
 
 @app.route('/menu')
 def menu():

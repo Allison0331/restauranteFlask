@@ -4,7 +4,9 @@
 {% block boton_info %}
 
 <a href="{{url_for('ingresar')}}">
-    <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Ingresar</button>
+
+<button type="button" class="btn btn-primary pull-right" style="float: inline-end;"> <h6> Ingresar</h6></button>
+
 </a>
 
 {% endblock boton_info %}
@@ -12,99 +14,266 @@
 
 {% block body %}
 
-
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<!-- Carousel -->
+<section id="main">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src=" {{ url_for('static', filename = 'imagenes/carrusel_1.jpg') }}" class="d-block w-100" alt="..." width="640" height="360">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div>
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename = 'imagenes/carusel_1.png') }}" class="d-block w-100" alt="carusel1">
+        <div class="carousel-caption d-none d-md-block">
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename = 'imagenes/carusel_2.png') }}" class="d-block w-100" alt="carusel2">
+        <div class="carousel-caption d-none d-md-block">
         </div>
-        <div class="carousel-item">
-            <img src="{{ url_for('static', filename = 'imagenes/carrusel_2.jpg') }}" class="d-block w-100" alt="..." width="640" height="360">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-            </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename = 'imagenes/carusel_3.png') }}" class="d-block w-100" alt="carusel3">
+        <div class="carousel-caption d-none d-md-block">
         </div>
-        <div class="carousel-item">
-            <img src="{{ url_for('static', filename = 'imagenes/carrusel_3.jpg') }}" class="d-block w-100" alt="..." width="640" height="360">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename = 'imagenes/carusel_4.png') }}" class="d-block w-100" alt="carusel4">
+        <div class="carousel-caption d-none d-md-block">
         </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename = 'imagenes/carusel_5.png') }}" class="d-block w-100" alt="carusel5">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-</div>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<!-- Fin Carousel -->
 
+<!-- Contenido centro -->
+<section id="contedidoPage" class="mt-4">
+  <div class="container">
 
-
-<section class="section">
-    <div class="content">
-
-        <div class="left">
-
-            <center>
-                <h2>¿QUIENES SOMOS</h2>
-
-                <p>
-                    Contando con la fortuna de tener un terreno propio de la familia ubicado en la vía que conduce a la hacienda el Paraíso, vía muy transitada los fines de semana y reconocida como destino turístico por su novela MARÍA.
-                </p>
-
-                <p>
-                    Es así como se unen esfuerzos de los socios y logran construir el EISNTEIN BROS. BEGALS, que fue fundado el 08 de diciembre del año 2007, y desde allí se convirtió en fuente de empleo para la familia y los
-                </p>
-            </center>
+    <div class="row">
+      <div class="col">
+        <div class="col text-center text-uppercase">
+          <small>Conoce nuestro restaurante</small>
+          <h2>EINSTEIN BROS BAGELS</h2>
         </div>
-
+      </div>
     </div>
 
+
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem; height:20rem">
+          <div class="card-body">
+            <h5 class="card-title centrado"><strong>QUIENES SOMOS</strong> </h5>
+            <p class="card-text">Un restaurante de productos horneados, que brinda a sus clientes deliciosos horneados a
+              nivel nacional e internacional, acompañados de las bebidas artesanales frías o calientes de la región.
+              <br>
+              Nos caracteriza el trato amable, un excelente servicio, y rapidez en las entregas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" style="width: 18rem;height:20rem">
+          <div class="card-body">
+            <h5 class="card-title centrado"><strong>MISION</strong> </h5>
+            <p class="card-text centrado">
+              Satisfacer las necesidades gastronómicas de nuestros clientes, ofreciendo alimentos y servicios con la más
+              alta calidad, donde se sobrepasen las expectativas de nuestros clientes y ser un espacio de trabajo que
+              permita la realización personal y el Desarrollo de sus colaboradores en el grupo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card" style="width: 18rem;height:20rem">
+          <div class="card-body">
+            <h5 class="card-title centrado"><strong>VISION</strong> </h5>
+            <p class="card-text">Superar las expectativas de nuestros clientes de forma tal que nuestro nombre sea
+              conocido como una experiencia memorable. Ser opción destacable y diferente. Mantener una excelente calidad
+              en nuestros platos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card" style="width: 18rem;height:20rem">
+          <div class="card-body">
+            <h5 class="card-title centrado"><strong>ENCUENTRANOS</strong> </h5>
+            <div class="mapa right2">
+              <iframe class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1991.2743778352124!2d-76.48754261434081!3d3.4592443150626186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1633317111037!5m2!1ses-419!2sco"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <p>
+              <h6> Vía Hacienda el Paraíso Km 7- Santa Elena - El Cerrito Valle <br>
+                <strong> Tel: 301 652 7358 | 312 000 0000</strong>
+              </h6>
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<aside class="aside">
+<!-- /Contenido centro -->
 
-    <div class="right">
-        <img class="imagen" src="{{ url_for('static', filename = 'imagenes/carrusel_1.jpg') }}" alt="">
+<!-- Contenido final Menu del dia-->
+<section id="contedidoPage" class="mt-4">
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+        <div class="col text-center text-uppercase">
+          <h2>CONSULTA NUESTRO MENÚ</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title centrado"><strong>HORNEADOS</strong> </h5>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/chocolatebirth.jpg') }}"
+                    class="d-block w-100" alt="chocolatebirth">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/churroparty.jpg') }}"
+                    class="d-block w-100" alt="churroparty">
+
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/cinamonraysy.jpg') }}"
+                    class="d-block w-100" alt="cinamonraysy">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Horneados/HorneadosCarrousel/greekyogurtchery.jpg') }}"
+                    class="d-block w-100" alt="greekyogurtchery">
+                </div>
+              </div>
+            </div>
+            </p>
+          </div>
+          <a href="{{url_for('menu_horneados')}}" class="btn btn-warning">Horneados</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title centrado"><strong>BEBIDAS</strong> </h5>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidobananafresa.jpg') }}"
+                    class="d-block w-100" alt="bananafresa">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidocaramelo.jpg') }}"
+                    class="d-block w-100" alt="caramelo">
+
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidochocolate.jpg') }}"
+                    class="d-block w-100" alt="chocolate">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidovainilla.jpg') }}"
+                    class="d-block w-100" alt="vainilla">
+                </div>
+            
+              </div>
+            </div>
+            </p>
+          </div>
+          <a href="{{url_for('menu_bebidas')}}" class="btn btn-warning">Bebidas</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title centrado"><strong>DESAYUNOS</strong> </h5>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/EBB_AvocadoVegOut.jpg') }}"
+                    class="d-block w-100" alt="EBB_AvocadoVegOut">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/EBB-TurkeyBaconAvocado.jpg') }}"
+                    class="d-block w-100" alt="TurkeyBaconAvocado">
+
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/panespinaca.jpg') }}"
+                    class="d-block w-100" alt="panespinaca">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/PizzaBagelCheese-1.jpg') }}"
+                    class="d-block w-100" alt="PizzaBagelCheese">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/PizzaBagelPepperoni.jpg') }}"
+                    class="d-block w-100" alt="PizzaBagelPepperoni">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/Sandwiches_TastyTurkey.jpg') }}"
+                    class="d-block w-100" alt="Sandwiches_TastyTurkey">
+                </div>
+              </div>
+            </div>
+            </p>
+          </div>
+          <a href="{{url_for('menu_desayunos')}}" class="btn btn-warning">Desayunos</a>
+        </div>
+      </div>
+
+
+
 
     </div>
 
 
-    <div class="mapa right2">
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1991.2743778352124!2d-76.48754261434081!3d3.4592443150626186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1633317111037!5m2!1ses-419!2sco" width="400" height="300"
-            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
 
-</aside>
 
-<section class="section imagenes">
-    <div class="final">
-        <img class="imagen" src="{{ url_for('static', filename = 'imagenes/carrusel_2.jpg') }}" alt="">
 
-    </div>
+  </div>
+</section <!-- /Contenido final Menu del dia-->
 
-    <div class="final">
-        <img class="imagen" src="{{ url_for('static', filename = 'imagenes/carrusel_3.jpg') }}" alt="">
-
-    </div>
-
-</section>
-<footer>
-
-</footer>
 
 
 {% endblock body %}

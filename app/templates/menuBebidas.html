@@ -4,57 +4,137 @@
 
 {% block menu %}
 <!---->
-<h4 style="text-align: center;">BEBIDAS</h4>
-<section class="imagenes" style="width: 100%;">
-    <div style="display: flex; ">
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Bebidas/batidobananafresa.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Batido de Banana y Fresas</div>
-            </div> -->
+<h4 style="text-align: center;color:white; background-color:rgb(53, 27, 3);">BEBIDAS</h4>
+
+<section id="contedidoPage" class="mt-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div class="col text-center text-uppercase">
+                    <small>Escoge tu bebida favorita</small>
+                </div>
+            </div>
+        </div>
+ 
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Batído banana fresa</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidobananafresa.jpg') }}"
+                        class="card-img-top" alt="bananafresa">
+                    <p>
+                        Delicioso batido frio de banana en fresa para disfrutar con tus horneados. <br>
+                        Precio: $10.000
+                    </p>
+                </div>
+               <p class="d-grid gap-2 d-md-block centrado">
+                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+              </p>    
+            </div>
         </div>
 
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Bebidas/batidocaramelo.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Batido de Caramelo</div>
-            </div> -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Batído sabor a caramelo</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidocaramelo.jpg') }}"
+                        class="card-img-top" alt="caramelo">
+                    <p>
+                        Delicioso batido frío sabor a caramelo en leche para disfrutar con tus horneados. <br>
+                        Precio: $10.000
+                    </p>
+                </div>
+                <p class="d-grid gap-2 d-md-block centrado">
+                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+                  </p>
+            </div>
         </div>
 
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Bebidas/batidochocolate.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Batido de Chocolate</div>
-            </div> -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Batído chocolate</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidochocolate.jpg') }}"
+                        class="card-img-top" alt="chocolate">
+                    <p>
+                        Delicioso batido frío sabor a chocolate en leche para disfrutar con tus horneados. <br>
+                        Precio: $15.000
+                    </p>
+                </div>
+                <p class="d-grid gap-2 d-md-block centrado">
+                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+                  </p>
+            </div>
         </div>
+
+        <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title centrado"><strong>Batído Vainilla</strong> </h5>
+                    <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidovainilla.jpg') }}"
+                        class="card-img-top" alt="vainilla">
+                    <p>
+                        Delicioso batido frío sabor a vainilla en leche para disfrutar con tus horneados. <br>
+                        Precio: $15.000
+                    </p>
+                </div>
+                <p class="d-grid gap-2 d-md-block centrado">
+                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+                  </p>
+            </div>
+        </div>
+ 
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title centrado"><strong>Cafe Helado</strong> </h5>
+                <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/cafehelado.jpg') }}
+                "
+                    class="card-img-top" alt="cafe helado">
+                <p>
+                    Delicioso cafe helado, el acompañante perfecto para disfrutar con tus horneados y desayunos. <br>
+                    Precio: $15.000
+                </p>
+            </div>
+            <p class="d-grid gap-2 d-md-block centrado">
+                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+              </p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title centrado"><strong>Batído Oreo</strong> </h5>
+                <img src="{{ url_for('static', filename = 'imagenes/Bebidas/BebidasCarrousel/batidooreo.jpg') }}"
+                    class="card-img-top" alt="caramelo">
+                <p>
+                    Delicioso batido frío con galletas de oreo crocantes en leche para disfrutar con tus horneados. <br>
+                    Precio: $15.000
+                </p>
+            </div>
+            <p class="d-grid gap-2 d-md-block centrado">
+                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
+                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
+              </p>
+        </div>
+    </div>
+
+
+
+
 
     </div>
-</section>
-
-<section class="imagenes" style="width: 100%; top:20px">
-    <div style="display: flex;  height:60%;">
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Bebidas/batidovainilla.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Batido de Vainilla</div>
-            </div> -->
-        </div>
-
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Bebidas/cafehelado.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Cafe Helado</div>
-            </div> -->
-        </div>
-
-        <div class="menuhorneados">
-            <img class="imagenhorneados" src="{{ url_for('static', filename = 'imagenes/Bebidas/tehelado.jpg') }}" alt="">
-            <!-- <div class="texto">
-                <div>Té Helado</div>
-            </div> -->
-        </div>
-
-    </div>
-</section>
-<!---->
+</section> 
 {% endblock menu %}

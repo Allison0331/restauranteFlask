@@ -5,47 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ url_for('static', filename = 'imagenes/icono_logo.jpg') }} ">
+    <link rel="icon" href="{{ url_for('static', filename = 'imagenes/icono_logo.png') }} ">
 
     <title>EinsteinsBrosBagels</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="{{ url_for('static', filename = 'css/estilos.css') }}" rel="stylesheet">
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 101ea0a7111f9ba40b382322530de7cf3040d8bc
 </head>
 
 <body>
     <!--EN ESTA PARTE SE CREA EL MENU DE LA APLICACION QUE PERMANECERA CONSTANTE EN TODAS LAS PANTALLAS-->
 
+
+    
+
     <div>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f6cb86;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"> <img src="{{ url_for('static', filename = 'imagenes/icono_logo.jpg') }}" alt="" width="60"> </a>
+                    <a class="navbar-brand" href="#"> <img src="{{ url_for('static', filename = 'imagenes/icono_logo.png') }}" alt="" width="60"> </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="nav justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+                                <a class="nav-link active textNormal" aria-current="page" href="{{url_for('index')}}">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url_for('menu_horneados')}}">Menu</a>
+                                <a class="nav-link textNormal" href="{{url_for('menu_horneados')}}">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Domicilios</a>
+                                <a class="nav-link textNormal" href="#">Domicilios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contactenos</a>
+                                <a class="nav-link textNormal" href="#">Contactenos</a>
                             </li>
 
 
@@ -78,15 +78,27 @@
 
     <!-- EN ESTA PARTE CREAMOS FOOTER DE NUESTRA APLICACION-->
     <section class="section pos_footer">
-        <footer class="bg-light text-center text-white">
-            <div class="container">
+        <footer class="bg-light text-center text-brwon">
+            <div class="container ">
+
                 <!--<h2>Share This Post</h2>-->
                 <div class="social">
-                    <a href="#" id="share-wa" class="sharer button"><i class="fab fa-3x fa-whatsapp-square"></i></a>
-                    <a href="#" id="share-fb" class="sharer button"><i class="fab fa-3x fa-facebook-square"></i></a>
-                    <a href="#" id="share-tw" class="sharer button"><i class="fab fa-3x fa-twitter-square"></i></a>
-                    <a href="#" id="share-li" class="sharer button"><i class="fab fa-3x fa-linkedin"></i></a>
-                    <a href="#" id="share-em" class="sharer button"><i class="fa fa-3x fa-envelope-square"></i></a>
+                    <a href="https://web.whatsapp.com/" target="_blank" id="share-wa" class="sharer button"><i class="fab fa-3x fa-whatsapp-square"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" id="share-fb" class="sharer button"><i class="fab fa-3x fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/?lang=es" target="_blank" id="share-tw" class="sharer button"><i class="fab fa-3x fa-twitter-square"></i></a>
+                    <a href="https://co.linkedin.com/" target="_blank" id="share-li" class="sharer button"><i class="fab fa-3x fa-linkedin"></i></a>
+                    <a href="https://mail.google.com/" target="_blank" id="share-em" class="sharer button"><i class="fa fa-3x fa-envelope-square"></i></a>
+                </div>
+
+                <div class="mt-2">
+                    <p>
+                        Copyright &copy; 2021 EinsteinsBrosBagels Derechos reservados.
+                    </p>
+                    <p>
+                        <a href="">Privacidad y condiciones</a> | Manejo y tratamiento de la información y datos
+                        personales
+
+                    </p>
                 </div>
 
             </div>
@@ -94,9 +106,14 @@
     </section>
 
 
-    <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
 
     <script src="{{ url_for('static', filename = 'js/estilos.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>

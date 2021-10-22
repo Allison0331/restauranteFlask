@@ -1,5 +1,8 @@
 from flask import Flask , render_template , redirect , request , url_for , before_render_template, after_this_request
 import easygui as eg
+import sqlite3
+from sqlite3 import Error
+
 
 
 app = Flask(__name__)
@@ -26,7 +29,29 @@ def Admin():
 
 @app.route('/dashUser3')
 def dashUser3():
-    return render_template('dashUser3.html')
+    
+    try:
+
+        conexion = sqlite3.connect('restaurante.db')
+
+        print("Connection is established: Database is created in memory")
+
+        cursorObj = conexion.cursor()
+
+        cursorObj.execute('SELECT * FROM productos')
+
+        rows = cursorObj.fetchall()
+
+    except Error:
+
+        print(Error)
+
+    finally:
+
+        conexion.close()
+        
+            
+    return render_template('dashUser3.html',rows = rows)
 
 @app.route('/regDashUser')
 def regDashUser():

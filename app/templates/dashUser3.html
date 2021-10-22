@@ -6,6 +6,7 @@
 <table id="example" class="table table-striped table-bordered nowrap mx-auto" style="width:100%">
     <thead>
         <tr>
+
             <th>Nombre</th>
             <th>Tipo Id</th>
             <th>No. Documento</th>
@@ -15,17 +16,22 @@
             <th>Correo</th>
             <th>Editar</th>
             <th>Eliminar</th>
+
+
         </tr>
     </thead>
     <tbody>
+        {% for pro in rows %}
         <tr>
-            <td>Zuleydis Barrios</td>
-            <td>Cedula</td>
-            <td>1111222222</td>
-            <td>28-Nov-1987</td>
-            <td>3016527358</td>
-            <td>Cartagena-Bol</td>
+
+            <td>{{ pro[0] }}</td>
+            <td>{{ pro[1] }}</td>
+            <td>{{ pro[2] }}</td>
+            <td>{{ pro[3] }}</td>
+            <td>{{ pro[4] }}</td>
+            <td>{{ pro[5] }}</td>
             <td>zuleydis@Uninorte.edu.co</td>
+
             <td>
                 <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>
             <td>
@@ -33,86 +39,11 @@
                 </p>
             </td>
         </tr>
+        {% endfor %}
 
 
-        <tr>
-            <td>Maria Elena</td>
-            <td>Cedula</td>
-            <td>1111222222</td>
-            <td>28-Nov-1987</td>
-            <td>3016527358</td>
-            <td>Barranquilla</td>
-            <td>Meusse@Uninorte.edu.co</td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                </p>
-        </tr>
-
-        <tr>
-            <td>Jhon Berastegui</td>
-            <td>Cedula</td>
-            <td>1111222223</td>
-            <td>28-Nov-1987</td>
-            <td>3016527358</td>
-            <td>Cali</td>
-            <td>JBerastegui@Uninorte.edu.co</td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                </p>
-
-        </tr>
 
 
-        <tr>
-            <td>Allison Castaño</td>
-            <td>Cedula</td>
-            <td>1111222224</td>
-            <td>28-Nov-1987</td>
-            <td>3016527358</td>
-            <td>Cali</td>
-            <td>lallison@Uninorte.edu.co</td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                </p>
-        </tr>
-
-        <tr>
-            <td>Gilberto Ayala</td>
-            <td>Cedula</td>
-            <td>1111222225</td>
-            <td>28-Nov-1987</td>
-            <td>3016527358</td>
-            <td>Bucaramanga</td>
-            <td>Gayala@Uninorte.edu.co</td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                </p>
-
-        </tr>
-
-        <tr>
-            <td>Abraham de Dios</td>
-            <td>Cedula</td>
-            <td>1111222226</td>
-            <td>28-Nov-1987</td>
-            <td>3016527358</td>
-            <td>Barranquilla</td>
-            <td>AbrahamdeDios@Uninorte.edu.co</td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>
-            <td>
-                <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button>
-                </p>
-
-        </tr>
 
 
 

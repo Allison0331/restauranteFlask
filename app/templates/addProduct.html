@@ -1,0 +1,63 @@
+
+
+{% block addProduct %}
+    <h1 class="text-center mt-4">Registrar producto</h1>
+    <div class="card col-sm-4 m-auto mt-5 p-5">
+        <form action="{{ url_for('addProduct')}}" method="post" class="form" enctype="multipart/form-data">
+            {{ form.csrf_token}}
+            <div class="mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">{{ form.nombre.label }}</label>
+                </div>
+                {{ form.nombre(class_="form-control")}}
+            </div>
+            <div class="mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">{{ form.descripcion.label }}</label>
+                </div>
+                {{ form.descripcion(class_="form-control")}}
+            </div>
+            <div class="mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">{{ form.categoria.label }}</label>
+                </div>
+                {{ form.categoria(class_="form-control")}}
+            </div>
+            <div class="mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">{{ form.precio.label }}</label>
+                </div>
+                {{ form.precio(class_="form-control")}}
+            </div>
+            <div class="mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">{{ form.cantidad.label }}</label>
+                </div>
+                {{ form.cantidad(class_="form-control")}}
+            </div>
+            <div class="mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">{{ form.imagen.label }}</label>
+                </div>
+                {{ form.imagen()}}
+            </div>
+            <div class="mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">{{ form.estado.label }}</label>
+                </div>
+                {{ form.estado(class_="form-control")}}
+            </div>
+            <button class="btn btn-primary">Agregar producto</button>
+            
+        </form>
+         
+
+
+
+
+
+
+    </div>
+{% endblock addProduct %}
+
+

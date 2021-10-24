@@ -1,11 +1,22 @@
+import os 
+import os.path
 from flask import Flask , render_template , redirect , request , url_for , before_render_template, after_this_request
+from werkzeug.utils import secure_filename
+from forms.forms import LoginForm, ProductForm, RegistroForm
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField, PasswordField
+
 import easygui as eg
 import sqlite3
 from sqlite3 import Error
+from db import *
 
-
+UPLOAD_FOLDER = os.path.abspath("app/static/imagenes/products") 
+ALLOWED_EXTENSIONS = set(["png","jpg","jpeg"])
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
+app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route('/')
 def index():
@@ -19,6 +30,7 @@ def ingresar():
 
 @app.route('/registro_usuario')
 def registro_usuario():
+
     return render_template('registro.html')
 
 """ RUTAS PARA EL DASHBOARD ADMINISTRATIVO """
@@ -29,6 +41,7 @@ def Admin():
 
 @app.route('/dashUser3')
 def dashUser3():
+    
     
     try:
 
@@ -52,6 +65,7 @@ def dashUser3():
         
             
     return render_template('dashUser3.html',rows = rows)
+    
 
 @app.route('/regDashUser')
 def regDashUser():
@@ -63,7 +77,7 @@ def layout():
 
 @app.route('/platos')
 def platos():
-    return render_template('dashPlatos3.html')  
+    return render_template('dashPlatos3.html') 
 
 """RUTAS DEL PERFIL DE USUARIO"""
 @app.route('/editar_perfil')
@@ -115,6 +129,26 @@ def menu_desayunos():
 @app.route('/menu/bebidas')
 def menu_bebidas():
     return render_template('/menuBebidas.html')
+
+@app.route('/platos/nuevo', methods=['GET','POST'])
+def addProduct():
+    form = ProductForm()
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        descripcion = request.form['descripcion']
+        categoria = request.form['categoria']
+        precio = request.form['precio']
+        cantidad = request.form['precio']
+        imagen = request.files['imagen']
+        filename = secure_filename(imagen.filename)
+        imagen.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+        estado = request.form['estado']
+        
+        db = get_db()
+        db.execute('INSERT INTO productos(nombre, descripcion, categoria, valor_unitario, cantidad, url, estado) VALUES (?,?,?,?,?,?,?)', (nombre,descripcion,categoria, precio,cantidad, filename, estado) )
+        db.commit()
+        return redirect(url_for("platos", respuesta='success'))
+    return render_template('dashPlatosNuevo.html',form=form)
 
 
 """RUTAS PARA EL MANEJO DE LA BASE DE DATOS BACK-END"""

@@ -9,21 +9,22 @@
 
     <title>EinsteinsBrosBagels</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 
     <link href="{{ url_for('static', filename = 'css/estilos.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
     <!--EN ESTA PARTE SE CREA EL MENU DE LA APLICACION QUE PERMANECERA CONSTANTE EN TODAS LAS PANTALLAS-->
 
 
-    
 
     <div>
         <header>
@@ -53,6 +54,8 @@
 
                         </ul>
                     </div>
+
+
                     {% block boton_info %} {% endblock boton_info %}
                 </div>
 
@@ -72,6 +75,8 @@
 
 
     <!--AQUI EN ESTA PARTE SE INGRESA TODA LA INFORMACION DE BLOQUES MODIFICABLES SEGUN CRITE RIO DE NECESIDAD-->
+
+
     {% block body %} {% endblock body %}
 
 
@@ -95,8 +100,7 @@
                         Copyright &copy; 2021 EinsteinsBrosBagels Derechos reservados.
                     </p>
                     <p>
-                        <a href="">Privacidad y condiciones</a> | Manejo y tratamiento de la información y datos
-                        personales
+                        <a href="">Privacidad y condiciones</a> | Manejo y tratamiento de la información y datos personales
 
                     </p>
                 </div>
@@ -106,16 +110,38 @@
     </section>
 
 
-    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    <!---->
+    {% if messages %}
+    <!---->
+
+    <ul class=flashes>
+        {% for category, message in messages %}
+
+        <script type="text/javascript">
+            swal({
+                title: "{{message}}",
+                text: "You clicked the button!",
+                icon: "{{category}}",
+            });
+        </script>
+
+
+        {% endfor %}
+        <!---->
+    </ul>
+    {% endif %}
+    <!---->
+    {% endwith %}
+    <!---->
 
 
     <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 
     <script src="{{ url_for('static', filename = 'js/estilos.js') }}"></script>
+
     <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
 
 

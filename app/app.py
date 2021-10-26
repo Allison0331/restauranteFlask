@@ -1,14 +1,25 @@
-from flask import Flask , render_template , redirect , request , url_for , before_render_template, after_this_request
-import easygui as eg
+from flask import Flask , flash, session, render_template , redirect , request , url_for , before_render_template, after_this_request
+
 import sqlite3
 from sqlite3 import Error
 
 
 
+from modelo.conexion import *
+
+
+
 app = Flask(__name__)
+app.secret_key = 'app secret key'
 
 @app.route('/')
 def index():
+    
+    if 'counter' in session:
+        session['counter'] += 1
+    else:
+        session['counter'] = 1
+    
     return render_template('home.html')
     
 
@@ -19,6 +30,7 @@ def ingresar():
 
 @app.route('/registro_usuario')
 def registro_usuario():
+    
     return render_template('registro.html')
 
 """ RUTAS PARA EL DASHBOARD ADMINISTRATIVO """
@@ -29,26 +41,13 @@ def Admin():
 
 @app.route('/dashUser3')
 def dashUser3():
+    sql = 'SELECT * FROM usuarios'
+    con = connectar()
+    consul = consultar(sql)
+    rows = consul.fetchall()
+    con.close()
     
-    try:
-
-        conexion = sqlite3.connect('restaurante.db')
-
-        print("Connection is established: Database is created in memory")
-
-        cursorObj = conexion.cursor()
-
-        cursorObj.execute('SELECT * FROM productos')
-
-        rows = cursorObj.fetchall()
-
-    except Error:
-
-        print(Error)
-
-    finally:
-
-        conexion.close()
+    """rows = cursorObj.fetchall()"""
         
             
     return render_template('dashUser3.html',rows = rows)
@@ -63,7 +62,13 @@ def layout():
 
 @app.route('/platos')
 def platos():
-    return render_template('dashPlatos3.html')  
+    sql = 'SELECT * FROM productos'
+    con = connectar()
+    consul = consultar(sql)
+    rows = consul.fetchall()
+    con.close()
+    
+    return render_template('dashPlatos3.html', rows = rows)  
 
 """RUTAS DEL PERFIL DE USUARIO"""
 @app.route('/editar_perfil')
@@ -89,9 +94,11 @@ def pedidos():
 @app.route('/iniciar_sesion' , methods = ['POST'])
 def iniciar_sesion():
     nombreUser = request.form['nombreUser']
+    
     if nombreUser == "admin":
         return Admin()
     else:
+        
         return render_template('editar_perfil.html')
     
 
@@ -114,14 +121,45 @@ def menu_desayunos():
 
 @app.route('/menu/bebidas')
 def menu_bebidas():
-    return render_template('/menuBebidas.html')
+    return render_template('menuBebidas.html')
 
 
 """RUTAS PARA EL MANEJO DE LA BASE DE DATOS BACK-END"""
-@app.route('/crear_usuario' , methods =('GET' , 'POST'))
-def crear_usuario(codigo):
-    codigousuario = codigo
-    return "Crear Usuario"
+@app.route('/crear_usuario' , methods=['GET', 'POST'])
+def crear_usuario():
+    if request.method == 'POST':
+        tipo = request.form['tipo']
+        documento = request.form['documento']
+        nombres = request.form['nombres']
+        apellidos = request.form['apellidos']
+        fecha = request.form['fecha']
+        direccion = request.form['direccion']
+        telefono = request.form['telefono']
+        email = request.form['email']
+        usuario = request.form['usuario']
+        contrasena = request.form['contrasena']
+        nivel = 3
+        estado = True
+        
+        
+        try:
+            con = connectar()
+            sql = 'INSERT INTO usuarios(tipo_identificacion, identificacion, nombres, apellidos, fecha_nacimiento, direccion, telefono, email, nombre_usuario, contrasena, nivel_acceso, estado) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+            entities = (tipo, documento, nombres, apellidos, fecha, direccion, telefono, email, usuario, contrasena, nivel, estado)
+
+            insertar(sql, entities)
+            
+            flash('Registro creado con exito', 'success')
+            
+            return redirect( url_for('ingresar') )
+               
+        except Error:
+            print(Error)
+        
+        con.close()
+    else:
+        return render_template('home.html')
+    
 
 @app.route('/Modificar_usuario' , methods =('GET' , 'POST'))
 def modificar_usuario(codigo):

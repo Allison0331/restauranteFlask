@@ -6,7 +6,6 @@ from forms.forms import LoginForm, ProductForm, RegistroForm
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField
 
-import easygui as eg
 import sqlite3
 from sqlite3 import Error
 from db import *

@@ -1,0 +1,76 @@
+{% extends 'layoutDashboard.html'%}
+<!---->
+{% block contentDash %}
+
+<h2 class="centrado">Agregar nuevo plato</h2>
+<div class="container">
+    <div class="row">
+
+        <div class="card col-12 col-md-4 offset-md-3 col-sm-10 offset-sm-2  m-auto mt-5 p-5">
+            <form action="{{ url_for('addProduct')}}" method="post" class="form" enctype="multipart/form-data">
+                {{ form.csrf_token}}
+                <div class="mb-3">
+                    <div class="col-sm-12">
+                        <label class="form-label">{{ form.nombre.label }}</label>
+                    </div>
+                    {{ form.nombre(class_="form-control")}}
+                </div>
+                <div class="mb-3">
+                    <div class="col-sm-12">
+                        <label class="form-label">{{ form.descripcion.label }}</label>
+                    </div>
+                    {{ form.descripcion(class_="form-control")}}
+                </div>
+                <div class="mb-3">
+                    <div class="col-sm-12">
+                        <label class="form-label">{{ form.categoria.label }}</label>
+                    </div>
+                    {{ form.categoria(class_="form-control")}}
+                </div>
+                <div class="mb-3">
+                    <div class="col-sm-12">
+                        <label class="form-label">{{ form.precio.label }}</label>
+                    </div>
+                    {{ form.precio(class_="form-control")}}
+                </div>
+                <div class="mb-3">
+                    <div class="col-sm-12">
+                        <label class="form-label">{{ form.cantidad.label }}</label>
+                    </div>
+                    {{ form.cantidad(class_="form-control")}}
+                </div>
+                <div class="mb-3">
+                    <div class="col-sm-12">
+                        <label class="form-label">{{ form.imagen.label }}</label>
+                    </div>
+                    {{ form.imagen()}}
+                </div>
+                <div class="mb-3">
+                    <div class="col-sm-12">
+                        <label class="form-label">{{ form.estado.label }}</label>
+                    </div>
+                    {{ form.estado(class_="form-control")}}
+                </div>
+                <button class="btn btn-primary">Agregar producto</button>
+    
+            </form>
+    
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<!-- Además del código anterior, los siguientes archivos de biblioteca Javascript se cargan para usar en este ejemplo: -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js|https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5. 2 / js / bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript"
+    src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript"
+    src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+{% endblock contentDash %}

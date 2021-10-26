@@ -4,7 +4,7 @@ from sqlite3 import Error
 def connectar():
     try:
 
-        conexion = sqlite3.connect('./app/database/restaurante.db')
+        conexion = sqlite3.connect('../app/database/restaurante.db')
 
         print("Connection is established: Database is created in memory")
 

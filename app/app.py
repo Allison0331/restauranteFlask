@@ -5,11 +5,6 @@ from werkzeug.utils import secure_filename
 from forms.forms import LoginForm, ProductForm, RegistroForm
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField
-<<<<<<< HEAD
-
-import easygui as eg
-=======
->>>>>>> 85780e013a170f646ee37316bfec677f55929e6e
 import sqlite3
 from sqlite3 import Error
 from db import *
@@ -56,12 +51,7 @@ def logout():
 
 
 @app.route('/registro_usuario')
-<<<<<<< HEAD
-def registro_usuario():
-
-=======
 def registro_usuario():    
->>>>>>> 85780e013a170f646ee37316bfec677f55929e6e
     return render_template('registro.html')
 
 """ RUTAS PARA EL DASHBOARD ADMINISTRATIVO """
@@ -111,9 +101,6 @@ def enConstruccion():
 
 @app.route('/platos')
 def platos():
-<<<<<<< HEAD
-    return render_template('dashPlatos3.html') 
-=======
     if ('user' in session and session['user']=='Admin'):   
         sql = 'SELECT * FROM productos'
         con = connectar()
@@ -124,7 +111,6 @@ def platos():
         return render_template('dashPlatos3.html', rows = rows)
     return redirect (url_for('errorAcceso'))
       
->>>>>>> 85780e013a170f646ee37316bfec677f55929e6e
 
 """RUTAS DEL PERFIL DE USUARIO"""
 @app.route('/perfilUser')
@@ -156,19 +142,6 @@ def pedidos():
 
 """"""
 
-<<<<<<< HEAD
-@app.route('/iniciar_sesion' , methods = ['POST'])
-def iniciar_sesion():
-    nombreUser = request.form['nombreUser']
-    if nombreUser == "admin":
-        return Admin()
-    else:
-        return render_template('editar_perfil.html')
-    
-
-   
-=======
->>>>>>> 85780e013a170f646ee37316bfec677f55929e6e
 
 @app.route('/menu')
 def menu():
@@ -212,12 +185,6 @@ def addProduct():
 
 
 """RUTAS PARA EL MANEJO DE LA BASE DE DATOS BACK-END"""
-<<<<<<< HEAD
-@app.route('/crear_usuario' , methods =('GET' , 'POST'))
-def crear_usuario(codigo):
-    codigousuario = codigo
-    return "Crear Usuario"
-=======
 @app.route('/crear_usuario' , methods=['GET', 'POST'])
 def crear_usuario():
     if request.method == 'POST':
@@ -253,7 +220,6 @@ def crear_usuario():
     else:
         return render_template('home.html')
     
->>>>>>> 85780e013a170f646ee37316bfec677f55929e6e
 
 @app.route('/Modificar_usuario' , methods =('GET' , 'POST'))
 def modificar_usuario(codigo):

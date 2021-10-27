@@ -6,7 +6,6 @@ from werkzeug.utils import secure_filename
 from forms.forms import LoginForm, ProductForm, RegistroForm
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField
-
 import sqlite3
 from sqlite3 import Error
 from db import *
@@ -32,89 +31,129 @@ def index():
         session['counter'] = 1
     
     return render_template('home.html')
-    
 
-@app.route('/ingresar')
+
+@app.route('/ingresar', methods=['GET', 'POST'])
 def ingresar():
-    return render_template('ingresar.html')
+    form= LoginForm()
+    if request.method == 'POST':
+        usuario=request.form['usuario']
+        contrasena=request.form['contrasena']
+        #usuario=form.usuario.data
+        #contrasena=form.contrasena.data
+        db = get_db()
+        cursorObj = db.cursor()
+        cursorObj.execute('SELECT * FROM usuarios WHERE nombre_usuario = ? and contrasena = ?' ,(usuario, contrasena))
+        loginusuarios=cursorObj.fetchall()
+        session['user']=usuario
+        if len(loginusuarios)>0:
+            if(session['user']== 'Admin'):
+                return redirect(url_for('Admin'))
+            else:
+                return redirect(url_for('perfilUser'))
+        else:
+            flash('Usuario o contraseña incorrecta','warning')
+            return redirect(url_for('ingresar'))        
+    return render_template('ingresar.html', form=form)
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('ingresar'))
 
 
 @app.route('/registro_usuario')
-def registro_usuario():
-    
+def registro_usuario():    
     return render_template('registro.html')
 
 """ RUTAS PARA EL DASHBOARD ADMINISTRATIVO """
 
 @app.route('/Admin')
 def Admin():
-    return render_template('dashAdministrativo.html')
+    if ('user' in session and session['user']=='Admin'):
+        return render_template('dashAdministrativo.html')
+    return redirect (url_for('errorAcceso'))
 
 @app.route('/dashUser3')
 def dashUser3():
-    sql = 'SELECT * FROM usuarios'
-    con = connectar()
-    consul = consultar(sql)
-    rows = consul.fetchall()
-    con.close()
-    
-    """rows = cursorObj.fetchall()"""
+    if ('user' in session and session['user']=='Admin') :    
+        sql = 'SELECT * FROM usuarios'
+        con = connectar()
+        consul = consultar(sql)
+        rows = consul.fetchall()
+        con.close()
         
-            
-    return render_template('dashUser3.html',rows = rows)
+        """rows = cursorObj.fetchall()"""           
+                
+        return render_template('dashUser3.html',rows = rows)
+    return redirect (url_for('errorAcceso'))
     
 
 @app.route('/regDashUser')
 def regDashUser():
-    return render_template('registrarDashUser.html')
+    if ('user' in session and session['user']=='Admin'):
+        return render_template('registrarDashUser.html')
+    return redirect (url_for('errorAcceso'))
+    
 
 @app.route('/layout')
 def layout():
     return render_template('layoutDashboard.html')
 
+@app.route('/errorAcceso')
+def errorAcceso():
+    session.clear()
+    return render_template('errorAcceso.html')
+
+@app.route('/enConstruccion')
+def enConstruccion():
+    session.clear()
+    return render_template('enConstruccion.html')
+
+
 @app.route('/platos')
 def platos():
-    sql = 'SELECT * FROM productos'
-    con = connectar()
-    consul = consultar(sql)
-    rows = consul.fetchall()
-    con.close()
-    
-    return render_template('dashPlatos3.html', rows = rows)  
+    if ('user' in session and session['user']=='Admin'):   
+        sql = 'SELECT * FROM productos'
+        con = connectar()
+        consul = consultar(sql)
+        rows = consul.fetchall()
+        con.close()
+        
+        return render_template('dashPlatos3.html', rows = rows)
+    return redirect (url_for('errorAcceso'))
+      
 
 """RUTAS DEL PERFIL DE USUARIO"""
-@app.route('/editar_perfil')
-def perfil():
-    return render_template('editar_perfil.html')
+@app.route('/perfilUser')
+def perfilUser():
+    if ('user' in session):
+        return render_template('editar_perfil.html')
+    return redirect (url_for('errorAcceso'))
 
 @app.route('/lista_deseos')
 def lista_deseos():
-    return render_template('listaDeseos.html')
+    if 'user' in session:
+        return render_template('listaDeseos.html')
+    return redirect (url_for('errorAcceso'))
+    
 
-@app.route('/perfil_usuario/editar_perfil')
+@app.route('/editar_perfil')
 def editar_perfil():
-    return render_template('editarPerfilUsuario.html')
+    if 'user' in session:
+        return render_template('editarPerfilUsuario.html')
+    return redirect (url_for('errorAcceso'))
 
 
 @app.route('/pedidos')
 def pedidos():
-    return render_template('pedidos.html')
+    if 'user' in session:
+        return render_template('pedidos.html')
+    return redirect (url_for('errorAcceso'))
 
 
 """"""
 
-@app.route('/iniciar_sesion' , methods = ['POST'])
-def iniciar_sesion():
-    nombreUser = request.form['nombreUser']
-    
-    if nombreUser == "admin":
-        return Admin()
-    else:
-        
-        return render_template('editar_perfil.html')
-    
-
-   
 
 @app.route('/menu')
 def menu():
@@ -137,23 +176,24 @@ def menu_bebidas():
 
 @app.route('/platos/nuevo', methods=['GET','POST'])
 def addProduct():
-    form = ProductForm()
-    if request.method == 'POST':
-        nombre = request.form['nombre']
-        descripcion = request.form['descripcion']
-        categoria = request.form['categoria']
-        precio = request.form['precio']
-        cantidad = request.form['precio']
-        imagen = request.files['imagen']
-        filename = secure_filename(imagen.filename)
-        imagen.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-        estado = request.form['estado']
-        
-        db = get_db()
-        db.execute('INSERT INTO productos(nombre, descripcion, categoria, valor_unitario, cantidad, url, estado) VALUES (?,?,?,?,?,?,?)', (nombre,descripcion,categoria, precio,cantidad, filename, estado) )
-        db.commit()
-        return redirect(url_for("platos", respuesta='success'))
-    return render_template('dashPlatosNuevo.html',form=form)
+    if ('user' in session and session['user']=='Admin'):
+        form = ProductForm()
+        if request.method == 'POST':
+            nombre = request.form['nombre']
+            descripcion = request.form['descripcion']
+            categoria = request.form['categoria']
+            precio = request.form['precio']
+            cantidad = request.form['precio']
+            imagen = request.files['imagen']
+            filename = secure_filename(imagen.filename)
+            imagen.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+            estado = request.form['estado']        
+            db = get_db()
+            db.execute('INSERT INTO productos(nombre, descripcion, categoria, valor_unitario, cantidad, url, estado) VALUES (?,?,?,?,?,?,?)', (nombre,descripcion,categoria, precio,cantidad, filename, estado) )
+            db.commit()
+            return redirect(url_for("platos", respuesta='success'))
+        return render_template('dashPlatosNuevo.html',form=form)
+    return redirect (url_for('errorAcceso'))
 
 
 """RUTAS PARA EL MANEJO DE LA BASE DE DATOS BACK-END"""
@@ -172,8 +212,8 @@ def crear_usuario():
         contrasena = request.form['contrasena']
         nivel = 3
         estado = True
-        
-        
+    
+    
         try:
             con = connectar()
             sql = 'INSERT INTO usuarios(tipo_identificacion, identificacion, nombres, apellidos, fecha_nacimiento, direccion, telefono, email, nombre_usuario, contrasena, nivel_acceso, estado) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
@@ -184,7 +224,7 @@ def crear_usuario():
             flash('Registro creado con exito', 'success')
             
             return redirect( url_for('ingresar') )
-               
+            
         except Error:
             print(Error)
         
@@ -195,15 +235,18 @@ def crear_usuario():
 
 @app.route('/Modificar_usuario' , methods =('GET' , 'POST'))
 def modificar_usuario(codigo):
-    codigousuario = codigo
-    return "Modificar Usuario"
+    if ('user' in session and session['user']=='Admin'):
+        codigousuario = codigo
+        return "Modificar Usuario"
+    return redirect (url_for('errorAcceso'))
 
 @app.route('/Consultar_usuarios' , methods =('GET' , 'POST'))
 def consultar_usuarios():
-    return "Consultar Usuarios"
+    if ('user' in session and session['user']=='Admin'):
+        return "Consultar Usuarios"
+    return redirect (url_for('errorAcceso'))
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    
+    app.run(debug=True)    

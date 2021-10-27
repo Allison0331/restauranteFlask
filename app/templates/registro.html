@@ -1,19 +1,17 @@
 {% extends 'layout.html' %}
 <!---->
 
-
 {% block body %}
 
 <div class="container" id="advanced-search-form" style="margin-top: 10px;">
-    <form action="/crear_usuario" method="post" class="formulario" style="font-size: 12;">
+    <form action="/ingresar" method="post" class="formulario" style="font-size: 12;">
 
         <h6 style="text-align: center;">FORMULARIO DE REGISTRO DE CLIENTES</h6>
         <div class="form-group">
             <label for="nombres">Nombres</label>
-            <input style="border-radius: 5px;" size="35" type="text " placeholder="nombres " id="nombres " name="nombres">
+            <input style="border-radius: 5px;" size="35" type="text " placeholder="nombres " id="nombres ">
 
-
-            <!--  <label for=""> &nbsp Sexo &nbsp &nbsp
+            <label for=""> &nbsp Sexo &nbsp &nbsp
                 <label class="form-check-label" for="flexRadioDefault1"> F</label>
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Masculino">
 
@@ -21,38 +19,38 @@
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
 
 
-            </label> -->
+            </label>
 
         </div>
 
 
         <div class="form-group " style="margin-top: 5px;">
             <label for="apellidos ">apellidos</label>
-            <input style="border-radius: 5px;" size="60" type="text " placeholder="Apellidos " id="apellidos" name="apellidos">
+            <input style="border-radius: 5px;" size="60" type="text " placeholder="Apellidos " id="apellidos">
         </div>
 
         <div class="form-group" style="margin-top: 5px;">
             <label for="tipo"> Tipo ID</label>
-            <select id="tipo" aria-label="Default select example" name="tipo">
+            <select id="tipo" aria-label="Default select example">
             <option selected>Seleccione</option>
-            <option value="CC">CC</option>
-            <option value="TI">TI</option>
-            <option value="CE">CE</option>
-            <option value="PASAPORTE">PASAPORTE</option>
+            <option value="1">CC</option>
+            <option value="2">TI</option>
+            <option value="3">CE</option>
+            <option value="3">PASAPORTE</option>
           </select>
 
             <label for="documento"> &nbsp  &nbsp No. Documento &nbsp &nbsp </label>
-            <input type="text" size="26" style="border-radius: 5px;" id="documento" name="documento">
+            <input type="text" size="26" style="border-radius: 5px;" id="documento">
         </div>
 
 
         <div class="form-group " style="margin-top: 5px;">
-            <label for="fecha">Fecha Nac.</label>
-            <input type="date" id="fecha" name="fecha">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha ">
 
 
             <label for="telefono ">&nbsp  &nbsp No. Telefono &nbsp  &nbsp</label>
-            <input type="text " placeholder="fijo / celular " id="telefono" style="border-radius: 5px;" size="22" name="telefono">
+            <input type="text " placeholder="fijo / celular " id="telefono" style="border-radius: 5px;" size="22">
 
         </div>
 
@@ -60,19 +58,19 @@
 
         <div class="form-group " style="margin-top: 5px;">
             <label for="direccion ">Direccion</label>
-            <input type="text " id="direccion " style="border-radius: 5px;" size="60" name="direccion">
+            <input type="text " id="direccion " style="border-radius: 5px;" size="60">
         </div>
 
 
         <div style="border-color: black; border-width: 2px; border-style: solid; margin-top: 5px;">
             <div class="form-group " style="margin-top: 10px;">
                 <label for="usuario ">Nombre de Usuario</label>
-                <input type="text " id="usuario " style="border-radius: 5px;" size="20" name="usuario">
+                <input type="text " id="usuario " style="border-radius: 5px;" size="20">
             </div>
 
             <div class="form-group " style="margin-top: 5px;">
                 <label for="contrasena ">Contraseña</label>
-                <input type="password" id="contrasena " style="border-radius: 5px;" size="15" name="contrasena">
+                <input type="password" id="contrasena " style="border-radius: 5px;" size="15">
 
                 <label for="contrasena2"> &nbsp Repite Contraseña</label>
                 <input type="password" id="contrasena2" style="border-radius: 5px;" size="15">
@@ -80,7 +78,7 @@
 
             <div class="form-group " style="margin-top: 5px;">
                 <label for="email ">Email</label>
-                <input type="email " placeholder="Email " id="email " size="49" style="border-radius: 5px; margin-bottom : 20px;" name="email">
+                <input type="email " placeholder="Email " id="email " size="49" style="border-radius: 5px; margin-bottom : 20px;">
             </div>
 
         </div>
@@ -105,13 +103,7 @@
                     <a href="{{ url_for('index') }}">
                         <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Regresar al Inicio</button>
                     </a>
-
-                    <!-- <a href="{{ url_for('crear_usuario') }}" class="btn btn-primary btn-sm float-right">Registrarse</a> -->
-                    <input type="submit" class="btn btn-primary btn-sm float-right" value="Registrarse">
-                    <!---->
-
-
-
+                    <a href="#" class="btn btn-primary btn-sm float-right">Registrarse</a>
                 </div>
 
             </div>
@@ -119,7 +111,6 @@
         <div class="card-body">
 
         </div>
-
     </form>
 </div>
 

@@ -1,4 +1,3 @@
-from flask import Flask , flash, session, render_template , redirect , request , url_for , before_render_template, after_this_request
 import os 
 import os.path
 from flask import Flask , render_template , redirect , request , url_for , before_render_template, after_this_request
@@ -13,23 +12,12 @@ from db import *
 UPLOAD_FOLDER = os.path.abspath("app/static/imagenes/products") 
 ALLOWED_EXTENSIONS = set(["png","jpg","jpeg"])
 
-from modelo.conexion import *
-
-
-
 app = Flask(__name__)
-app.secret_key = 'app secret key'
 app.secret_key = os.urandom(24)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route('/')
 def index():
-    
-    if 'counter' in session:
-        session['counter'] += 1
-    else:
-        session['counter'] = 1
-    
     return render_template('home.html')
 
 
@@ -172,7 +160,7 @@ def menu_desayunos():
 
 @app.route('/menu/bebidas')
 def menu_bebidas():
-    return render_template('menuBebidas.html')
+    return render_template('/menuBebidas.html')
 
 @app.route('/platos/nuevo', methods=['GET','POST'])
 def addProduct():

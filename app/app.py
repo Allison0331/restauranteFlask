@@ -71,7 +71,7 @@ def registro_usuario():
 @app.route('/Admin')
 def Admin():
     if ('user' in session and session['user']=='Admin'):
-        return render_template('dashAdministrativo.html')
+        return render_template('dashAdministrativo.html', usuario=session['user'])
     return redirect (url_for('errorAcceso'))
 
 @app.route('/dashUser3')
@@ -128,7 +128,7 @@ def platos():
 @app.route('/perfilUser')
 def perfilUser():
     if ('user' in session):
-        return render_template('editar_perfil.html')
+        return render_template('editar_perfil.html', usuario=session['user'])
     return redirect (url_for('errorAcceso'))
 
 @app.route('/lista_deseos')

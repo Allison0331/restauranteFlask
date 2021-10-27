@@ -74,36 +74,12 @@ def Admin():
 
 @app.route('/dashUser3')
 def dashUser3():
-<<<<<<< HEAD
-    
-    
-    try:
-
-        conexion = sqlite3.connect('restaurante.db')
-
-        print("Connection is established: Database is created in memory")
-
-        cursorObj = conexion.cursor()
-
-        cursorObj.execute('SELECT * FROM productos')
-
-        rows = cursorObj.fetchall()
-
-    except Error:
-
-        print(Error)
-
-    finally:
-
-        conexion.close()
-=======
     if ('user' in session and session['user']=='Admin') :    
         sql = 'SELECT * FROM usuarios'
         con = connectar()
         consul = consultar(sql)
         rows = consul.fetchall()
         con.close()
->>>>>>> 85780e013a170f646ee37316bfec677f55929e6e
         
         """rows = cursorObj.fetchall()"""           
                 

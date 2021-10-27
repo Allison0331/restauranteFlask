@@ -2,7 +2,7 @@
 <!---->
 {% block body %}
 <center>
-    <form action="/iniciar_sesion" method="post">
+    <form action="/ingresar" method="POST">
         <div class="container py-5 h-100">
                      <div class="row d-flex justify-content-center align-items-center h-100 ">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5 ">
@@ -12,13 +12,23 @@
                             <h3 class="mb-5"> <img width="15%" src="{{ url_for('static', filename = 'imagenes/inicio_sesion.jpg') }}" alt=""> Iniciar Sesion</h3>
 
                             <div class="form-outline mb-4">
-                                <input type="text" id="typeEmailX" class="form-control form-control-lg" name="nombreUser" />
-                                <label class="form-label" for="typeEmailX">Usuario</label>
+                                <input type="text" id="usuario" class="form-control form-control-lg" name="usuario" />
+                                <label class="form-label" for="usuario">Usuario</label>
                             </div>
 
                             <div class="form-outline mb-4">
-                                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                                <label class="form-label" for="typePasswordX">Password</label>
+                                <input type="password" id="contrasena" class="form-control form-control-lg" name="contrasena" />
+                                <label class="form-label" for="contrasena">Password</label>
+                            </div>
+
+                            <div class="cols-sm-8 txt-red">
+                                {% with mensajes = get_flashed_messages() %}
+                                    {% if mensajes %}
+                                        {% for m in mensajes %}
+                                            <p>{{m}}</p>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endwith %}
                             </div>
 
                             <!-- Checkbox -->
@@ -27,66 +37,21 @@
                                 <label class="form-check-label" for="form1Example3"> Recordar Contraseña </label>
                             </div>
 
+                           
+
                             <a href="{{url_for('registro_usuario')}}">
                                 <button class="btn btn-primary" type="button">Registrarse</button>
                             </a>
 
-                            <a href="{{url_for('iniciar_sesion')}}">
+                            <a href="{{url_for('ingresar')}}">
                                 <button class="btn btn-primary" type="submit">Iniciar Sesion</button>
                             </a>
-                            <!--<hr class="my-4">-->
-
-                            <!--<button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-                            <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
-                            -->
-
                         </div>
                     </div>
                 </div>
             </div>
          </div>
     </form>
-
-    <!--
-    <section class="vh-100" style="background-color: #508bfc;">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                        <div class="card-body p-5 text-center">
-
-                            <h3 class="mb-5">Sign in</h3>
-
-                            <div class="form-outline mb-4">
-                                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                                <label class="form-label" for="typeEmailX">Email</label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                                <label class="form-label" for="typePasswordX">Password</label>
-                            </div>
-
-                            
-                            <div class="form-check d-flex justify-content-start mb-4">
-                                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                                <label class="form-check-label" for="form1Example3"> Remember password </label>
-                            </div>
-
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-
-                            <hr class="my-4">
-
-                            <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;" type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-                            <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;" type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
 </center>
 
 {% endblock body %}

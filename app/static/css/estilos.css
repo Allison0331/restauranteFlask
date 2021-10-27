@@ -28,6 +28,16 @@ body {
     
 }
 
+.fondo{
+    background-image: url(../imagenes/logotransparencia.png);
+    height: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+}
+
 
 .right {
     /*

@@ -1,5 +1,5 @@
 :root {
-    --primary: #f8f0cc;
+    --primary: #fbd9a1;
     --light: #ffffff;
     --grey: #efefef;
     --dark: #000000;
@@ -16,6 +16,8 @@ body {
 .centrado {
     text-align: center;
   }
+
+
 
 .xxx{
     color: #000000;

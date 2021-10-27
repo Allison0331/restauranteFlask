@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+<!---->
+
+{% block body %}
+<!---->
+<div class="container fondo">
+
+    <div class="centrado mt-4">
+        <a class="navbar-brand" href="#"> <img src="{{ url_for('static', filename = 'imagenes/enlaceroto.png') }}" alt="" width="150"> </a>
+        <h2>Esta página no está disponible</h2>
+        <p>
+           <h5> Es posible que el enlace esté roto o que la pagina que intentas abrir no esta disponible.<br> Verifica que el enlace que quieres abrir es correcto.</h5>
+        </p>
+        <a href="{{url_for('index')}}"><button class="btn btn-primary"
+            type="button">Volver a la pagina de inicio</button></a>
+        
+    </div>
+        
+</div>
+<div class="container-fluid">
+    
+            {% block menu %}
+         
+            {% endblock menu %}
+
+        </div>
+    </div>
+</div>
+{% endblock body %}

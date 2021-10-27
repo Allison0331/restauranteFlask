@@ -6,7 +6,7 @@ def get_db():
     try:
         if 'db' not in g:
             print('conectada')
-            g.db = sqlite3.connect('app/database/restaurante.db')
+            g.db = sqlite3.connect('database/restaurante.db')
         return g.db
     except Error:
         print(Error)

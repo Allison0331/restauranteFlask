@@ -15,120 +15,144 @@
                 </div>
             </div>
         </div>
-     <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title centrado"><strong>Avocado Vegetariano</strong> </h5>
-                    <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/EBB_AvocadoVegOut.jpg') }}"
-                        class="card-img-top" alt="EBB_AvocadoVegOut">
-                    <p>
-                        Avocado tenders, Pay Vegano de Cacao, Portobello burger y Veganachos. Creaciones de la casa para el deleite de todos. <br>
-                        Precio: $10.000
+
+<div class="container center">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title centrado"><strong>Avocado Vegetariano</strong> </h5>
+                        <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/EBB_AvocadoVegOut.jpg') }}"
+                            class="card-img-top" alt="EBB_AvocadoVegOut">
+                        <p>
+                            Avocado tenders, Pay Vegano de Cacao, Portobello burger y Veganachos. Creaciones de la casa
+                            para el deleite de todos. <br>
+                            Precio: $10.000
+                        </p>
+                    </div>
+                    <p class="d-grid gap-2 d-md-block centrado">
+                        <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a
+                                lista de deseos</button></a>
+                        <a href="{{url_for('pedidos')}}"><button class="btn btn-success"
+                                type="button">Comprar</button></a>
                     </p>
                 </div>
-               <p class="d-grid gap-2 d-md-block centrado">
-                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
-                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
-              </p>    
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title centrado"><strong>Turkey Bacon Avocado</strong> </h5>
+                        <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/EBB-TurkeyBaconAvocado.jpg') }}"
+                            class="card-img-top" alt="EBB_AvocadoVegOut">
+                        <p>
+                            Prueba nuestro Turkey Bacon Avocado con DOBLE CARNE, tiene: Pavo, Bacon, Aguacate y Queso
+                            Provolone. <br>
+                            Precio: $35.000
+                        </p>
+                    </div>
+                    <p class="d-grid gap-2 d-md-block centrado">
+                        <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a
+                                lista de deseos</button></a>
+                        <a href="{{url_for('pedidos')}}"><button class="btn btn-success"
+                                type="button">Comprar</button></a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title centrado"><strong>Pan Espinaca</strong> </h5>
+                        <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/panespinaca.jpg') }}"
+                            class="card-img-top" alt="panespinaca">
+                        <p>
+                            Un exquisito, esponjoso y nutritivo pan o budín de espinaca y queso; ideal para acompañar
+                            todas las comidas.
+                            pan espinaca.<br>
+                            Precio: $15.000
+                        </p>
+                    </div>
+                    <p class="d-grid gap-2 d-md-block centrado">
+                        <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a
+                                lista de deseos</button></a>
+                        <a href="{{url_for('pedidos')}}"><button class="btn btn-success"
+                                type="button">Comprar</button></a>
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title centrado"><strong>Turkey Bacon Avocado</strong> </h5>
-                    <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/EBB-TurkeyBaconAvocado.jpg') }}"
-                        class="card-img-top" alt="EBB_AvocadoVegOut">
-                    <p>
-                        Prueba nuestro Turkey Bacon Avocado con DOBLE CARNE, tiene: Pavo, Bacon, Aguacate y Queso Provolone. <br>
-                        Precio: $35.000
-                    </p>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title centrado"><strong>Pizza Bagel Cheese</strong> </h5>
+                            <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/PizzaBagelCheese-1.jpg') }}"
+                                class="card-img-top" alt="PizzaBagelCheese-1">
+                            <p>
+                                Pizza Cheese. Con una masa extrafina y crocante y un delicioso sabor jugoso en cada una
+                                de sus variedades. <br>
+                                Precio: $15.000
+                            </p>
+                        </div>
+                        <p class="d-grid gap-2 d-md-block centrado">
+                            <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary"
+                                    type="button">Agregar a lista de deseos</button></a>
+                            <a href="{{url_for('pedidos')}}"><button class="btn btn-success"
+                                    type="button">Comprar</button></a>
+                        </p>
+                    </div>
                 </div>
-                <p class="d-grid gap-2 d-md-block centrado">
-                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
-                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
-                  </p>
-            </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title centrado"><strong>Pan Espinaca</strong> </h5>
-                    <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/panespinaca.jpg') }}"
-                        class="card-img-top" alt="panespinaca">
-                    <p>
-                        Un exquisito, esponjoso y nutritivo pan o budín de espinaca y queso; ideal para acompañar todas las comidas.
-                        pan espinaca.<br>
-                        Precio: $15.000
-                    </p>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title centrado"><strong>Pizza Bagel Pepperoni</strong> </h5>
+                            <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/PizzaBagelPepperoni.jpg') }}"
+                                class="card-img-top" alt="PizzaBagelPepperoni">
+                            <p>
+                                Toda una mezcla deliciosa en una pizza hecha con base de salsa de tomate, mozzarella y
+                                pepperoni. <br>
+                                Precio: $15.000
+                            </p>
+                        </div>
+                        <p class="d-grid gap-2 d-md-block centrado">
+                            <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary"
+                                    type="button">Agregar a lista de deseos</button></a>
+                            <a href="{{url_for('pedidos')}}"><button class="btn btn-success"
+                                    type="button">Comprar</button></a>
+                        </p>
+                    </div>
                 </div>
-                <p class="d-grid gap-2 d-md-block centrado">
-                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
-                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
-                  </p>
-            </div>
-        </div>
 
-        <div class="row mt-3">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title centrado"><strong>Pizza Bagel Cheese</strong> </h5>
-                    <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/PizzaBagelCheese-1.jpg') }}"
-                        class="card-img-top" alt="PizzaBagelCheese-1">
-                    <p>
-                        Pizza Cheese. Con una masa extrafina y crocante y un delicioso sabor jugoso en cada una de sus variedades. <br>
-                        Precio: $15.000
-                    </p>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title centrado"><strong>Sandwiches TastyTurkey</strong> </h5>
+                            <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/Sandwiches_TastyTurkey.jpg') }}"
+                                class="card-img-top" alt="Sandwiches_TastyTurkey">
+                            <p>
+                                Sandwiches TastyTurkey elaborado con provolone, gouda, mozzarella, Colby jack, Monterey
+                                jack y cheddar. <br>
+                                Precio: $15.000
+                            </p>
+                        </div>
+                        <p class="d-grid gap-2 d-md-block centrado">
+                            <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary"
+                                    type="button">Agregar a lista de deseos</button></a>
+                            <a href="{{url_for('pedidos')}}"><button class="btn btn-success"
+                                    type="button">Comprar</button></a>
+                        </p>
+                    </div>
                 </div>
-                <p class="d-grid gap-2 d-md-block centrado">
-                    <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
-                    <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
-                  </p>
-            </div>
-        </div>
- 
 
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title centrado"><strong>Pizza Bagel Pepperoni</strong> </h5>
-                <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/PizzaBagelPepperoni.jpg') }}"
-                                    class="card-img-top" alt="PizzaBagelPepperoni">
-                <p>
-                    Toda una mezcla deliciosa en una pizza hecha con base de salsa de tomate, mozzarella y pepperoni. <br>
-                    Precio: $15.000
-                </p>
             </div>
-            <p class="d-grid gap-2 d-md-block centrado">
-                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
-                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
-              </p>
-        </div>
+        
     </div>
 
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title centrado"><strong>Sandwiches TastyTurkey</strong> </h5>
-                <img src="{{ url_for('static', filename = 'imagenes/Desayuno_Almuerzo/DesyunosCarrousel/Sandwiches_TastyTurkey.jpg') }}"
-                    class="card-img-top" alt="Sandwiches_TastyTurkey">
-                <p>
-                    Sandwiches TastyTurkey elaborado con provolone, gouda, mozzarella, Colby jack, Monterey jack y cheddar. <br>
-                    Precio: $15.000
-                </p>
-            </div>
-            <p class="d-grid gap-2 d-md-block centrado">
-                <a href="{{url_for('lista_deseos')}}"><button class="btn btn-secondary" type="button">Agregar a lista de deseos</button></a>
-                <a href="{{url_for('pedidos')}}"><button class="btn btn-success" type="button">Comprar</button></a>
-              </p>
-        </div>
-    </div>
-
-    </div>
-</section> 
+</section>
 
 
 

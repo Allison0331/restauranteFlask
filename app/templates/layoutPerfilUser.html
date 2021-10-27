@@ -3,12 +3,11 @@
 
 {% block boton_info %}
 
-<a href="{{url_for('index')}}">
+<a href="{{url_for('logout')}}">
     <button type="button" class="mover btn btn-outline-info pull-right" style="float: inline-end;">Cerrar Sesión</button>
 </a>
 
 {% endblock boton_info %}
-
 
 {% block body %}
 
@@ -23,7 +22,7 @@
             <div class="col-12 col-md-6 mb-4 mb-md-0 usuario_info">
                 <ul>
                     <li class="principal">
-                        <i class="fas fa-user-circle"></i> Hola, <strong>Guiacomo Guilliz</strong>
+                        <i class="fas fa-user-circle"></i> hola, {{usuario}}
                     </li>
                     <li>
                         <i class="far fa-envelope"></i> <a href="mailto:guiac2314@hotmail.com">guiac2314@hotmail.com</a>
